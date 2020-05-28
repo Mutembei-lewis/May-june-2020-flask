@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block head %}
+{{super()}}
+<title> post update </title>
+{% endblock  %}
+{% block content %}
+<section>
+    <div class="row px-2 py-4 justify-content-around ">
+       <div class="col-md-8 col-lg-8 col-sm-12  add-post text-dark">
+          <form action="" enctype="multipart/form-data" method="POST">
+            
+     {{ form.hidden_tag() }}
+     <p>
+         {{form.title.label }}<br>
+         {{ form.title() }}<br>
+         {% for error in form.title.errors %}
+         <span style="color: red;">[{{ error }}]</span>
+         {% endfor %}
+     </p>
+    
+     <p>
+        {{form.category.label }}<br>
+        {{ form.category() }}<br>
+        {% for error in form.category.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+     <p>
+         {{ form.content.label }}<br>
+         {{ form.content(class="form-textarea border-5 border-success") }}<br>
+         {% for error in form.content.errors %}
+         <span style="color: red;">[{{ error }}]</span>
+         {% endfor %}
+     </p>
+     <p>
+         {{ form.the_image.label }}<br>
+         {{ form.the_image(class="form-textarea border-5 border-success") }}<br>
+         {% for error in form.the_image.errors %}
+         <span style="color: red;">[{{ error }}]</span>
+         {% endfor %}
+     </p>
+  
+
+
+
+     <p>{{ form.submit(class="btn btn-sm btn-outline-info") }}</p>
+</form>
+
+       </div>
+             
+       <div class=" d-none d-md-block d-lg-block col-md-3 col-3-lg  side-menu  text-dark"> 
+                 <h4>sidebar</h4>
+                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  <br> Iure esse laudantium error, dolorum magni, magnam in eos molestiae voluptas odio, 
+                 </div>
+       </div>
+   </section>
+{% endblock  %}

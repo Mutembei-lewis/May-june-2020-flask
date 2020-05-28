@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% block head %}
+{{super()}}
+<title> Register</title>
+<style>
+body{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(to bottom, rgba(0, 229, 255, 0.462),rgba(8, 87, 184, 0.462),rgba(0, 157, 255, 0.51)), url('static/images/leaf.jpg');
+background-attachment: fixed;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+/**/
+}
+.formdiv{
+    
+    background-color: rgba(255, 255, 255, 0.714);
+    width: 45vw;
+    margin: 10px;
+    height: 90vh;
+    transform: translateX(45%);
+    
+    
+    justify-content: center;
+    padding: 8px;
+    border-radius: 24px;
+    z-index: 900;
+    
+
+
+
+}
+.formcontainer{
+ padding-left: 10px;
+ margin-bottom: 8px;
+ margin-left: 10px;
+ 
+
+   
+}
+div a{
+
+}
+div a:hover{
+    text-decoration: none;
+    color: white;
+}
+.form-element{
+    border: 0px none;
+  
+    margin-left: 3px;
+    margin-left: 6px;
+    background-color: rgba(255, 255, 255, 0.741);
+
+}
+.form-element:hover{
+border-radius: 6px;
+border: 1px solid blue;
+background-color: #fff;
+}
+.form-element:active{
+background-color: #fff;
+}
+.labels{
+    color:#FF5500;
+    margin-left: 6px;
+font-weight: 500;
+}
+h3{
+    
+    font-weight: 800;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #191970;
+    font-size: 30pt;
+}
+.submit{
+width: 50%;
+margin-top: 6px;
+margin-left: 15px;
+}
+
+</style>
+{% endblock  %}
+{% block  content %}
+
+<section>
+    <div class=" formdiv">
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <h3 class="text-center"> Sign Up</h3>
+        <div class="formcontainer form-group"> <p>
+            {{ form.username.label(class='labels') }} <br>
+            {{ form.username(size=32, class='form-element form-control-sm') }}
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        </div>
+        <div class="formcontainer form-group">
+            <p>
+                {{ form.email.label(class='labels') }}<br>
+                {{ form.email(size=32,class='form-element form-control-sm') }}
+                {% for error in form.email.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+
+        </div>
+           <div class="formcontainer form-group">
+            <p>
+                {{ form.password.label(class='labels') }}<br>
+                {{ form.password(size=32,class='form-element form-control-sm') }}
+                {% for error in form.password.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+
+           </div>
+           <div class="formcontainer form-group">
+            <p>
+                {{ form.password2.label(class='labels') }}<br>
+                {{ form.password2(size=32,class='form-element form-control-sm') }}
+                {% for error in form.password2.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+
+           </div>
+           <div class="submit">  {{ form.submit(class=' btn btn-block btn-outline-info') }}</div>
+        
+       
+       
+       
+     </form>
+     <div class="formcontainer mt-5">
+      <small> Already have an account ?        <button class="btn btn-small btn-outline-primary"> <a href="{{url_for('login')}}"> Login</a></button>   </small>   
+     </div>
+   
+ </div>
+</section>
+{% endblock  %}

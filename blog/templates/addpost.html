@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block  head%}
+<title>
+    Add post
+</title>
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static', filename='css/post.css')}}">
+{% endblock  %}
+{% block content %}
+<div class="adform ">
+    <form action="add_post" enctype="multipart/form-data" method="POST">
+       
+{{ form.hidden_tag() }}
+<p>
+    {{form.title.label(class='labels') }}<br>
+    {{ form.title( class='fill-in') }}<br>
+    {% for error in form.title.errors %}
+    <span style="color: red;">[{{ error }}]</span>
+    {% endfor %}
+</p>
+ 
+<p>
+   {{form.category.label(class='labels') }}<br>
+   {{ form.category(class='fill-in') }}<br>
+   {% for error in form.category.errors %}
+   <span style="color: red;">[{{ error }}]</span>
+   {% endfor %}
+</p>
+<p>
+    {{ form.content.label(class='labels') }}<br>
+    {{ form.content(class="form-textarea") }}<br>
+    {% for error in form.content.errors %}
+    <span style="color: red;">[{{ error }}]</span>
+    {% endfor %}
+</p>
+<p>
+    {{ form.the_image.label(class='labels') }}<br>
+    {{ form.the_image(class="  ") }}<br>
+    {% for error in form.the_image.errors %}
+    <span style="color: red;">[{{ error }}]</span>
+    {% endfor %}
+</p>
+
+
+
+
+<p>{{ form.submit(class="btn btn-sm btn-outline-info") }}</p>
+</form>
+ 
+</div>
+
+{% endblock  %}
+
+ 
+
+   
+
+   
+
+
+

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> User page </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/modal.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/page.css')}}">
+
+        <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/font-awesome.min.css')}}"> -->
+        <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+        
+        <style>
+            
+        </style>
+
+    </head>
+    
+        <!--  side navigation section  -->
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn" ></i> <i class=" fas fa-times" id="cancel" ></i>
+
+        </label>
+
+
+        <div class="sidebar">
+            <header> My Account</header>
+            <ul>
+                <li> <a href="{{url_for('index')}}">  <i class="fa fa-home"> </i> Home</a>  </li> 
+                <li> <a href="{{url_for('blog')}}"> <i class="fa fa-blog">  </i>Blog</a></li>
+                <li>  <a href="{{url_for('add_post')}}">  <i class="fa fa-plus"></i>  post</a></li>
+
+                <li> <a href="">  About Us </a></li>
+                <li> <a href="">    Contact  Us</a></li>
+               
+                <li>  <button type="button" class="btn ml-3 bg-transparent text-light" data-toggle="modal" data-target="#exampleModalLongTitle"> <i class="fas fa-trash"></i> account </button>  </li>
+                <li> <a href="{{url_for('logout')}}"> <i class="fas fa-user"> </i> logout</a></li>
+            </ul>
+        </div>
+        <!-- end of side navigation section -->
+        <section>
+            <div class="user_intro"
+             style="background: url('static/images/2.jpg');    
+            background-size: cover;
+            background-repeat: no repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            height: 60vh;" >
+
+           <p class="text-center " id="userhomediv">
+            Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. 
+            Fugit corporis <br> eum ea officia,
+      
+            
+           </p>
+            </div>
+            
+            
+        </section>
+      
+        <section>
+            <div class="row rowbox ">
+                <div class="col-md-4 mx-auto text-center col-lg-4 d-flex-sm  " id="user_description_card">
+                    <img  src="/static/images/profiles/{{user.profile_picture}}" src="/static/images/home/anchor.jpg" alt="" class="img-fluid  " id="newavatar"> <br>
+                   
+                        <h6> {{user.firstname}} {{user.lastname}}</h6>
+                        <h6> {{user.email}}</h6> 
+                       
+                        <button class="btn text-left btn-outline-info">Bio</button> <br>
+
+                    <p class="text-left mt-4">
+                        {{user.bio}}
+
+                        
+                    </p>
+                 <button type="button" class="btn btn-outline-info btn-sm"> update profile</button> 
+                      <button class="signup"> + follow  </button> <br>
+            <div class="followlinkcss"> <i class="fab fa-github icons"></i></a> </div >  <div class="followlinkcss"> <a href=""> <i class="fab fa-twitter icons"></i></a></div> <div class="followlinkcss"> <a href=""> <i class="fab fa-instagram icons"></i> </a> </div>  
+                 <br>
+                </div>
+                <div class="col-md-7 mx-auto col-lg-7 col-sm-10  " id="user_form_card">
+                    
+                    <form action="account" method="post" class="updateform" enctype="multipart/form-data">
+                        
+                    {{ form.hidden_tag() }}
+                    <div class="formcontainer d-lg-inlineflex d-md-inline-flex">
+
+                        {{ form.firstname.label(class='labels') }} 
+                        {{ form.firstname(class='form-element form-control-sm') }}
+                    </div>
+                    <div class="formcontainer d-lg-inlinflex d-md-inline-flex">
+                            {{ form.lastname.label(class='labels') }}
+                            {{ form.lastname(class='form-element form-control-sm') }}
+                    </div>
+                    <br>
+                    <div class="formcontainer d-lg-inlinflex d-md-inline-flex">
+                        {{ form.username.label(class='labels') }}
+                        {{ form.username(class='form-element form-control-sm') }}
+                    </div>
+                    
+                    <div class="formcontainer d-lg-inlinflex d-md-inline-flex">
+                        {{ form.email.label(class='labels') }}
+                        {{ form.email(class='form-element form-control-sm') }}
+                    </div> <br>
+                    <div class="formcontainer d-lg-inlinflex d-md-inline-flex">
+                        {{ form.avatar.label(class='labels pr-5') }}
+                        {{ form.avatar() }}
+                    </div>
+                    <div class="formcontainer d-lg-inlinflex d-md-inline-flex">
+                        {{ form.address.label(class='labels') }}
+                        {{ form.address(class='form-element form-control-sm') }}
+                    </div>
+                    
+                    <div class="formcontainer d-lg-inlinflex d-md-inline-flex">
+                        {{ form.country.label(class='labels') }}
+                        {{ form.country(class='form-element form-control-sm') }}
+                    </div>
+                    
+                   
+                    
+                    <div class="formcontainer d-lg-inlinflex d-md-inline-flex">
+                        {{ form.phone_number.label(class='labels') }}
+                        {{ form.phone_number(class='form-element form-control-sm') }}
+                    </div>
+                    <div class="biocontainer ">
+                       <div>  {{ form.bio.label(class='biolabel ') }} </div>
+                        {{ form.bio(class='form-element bio ') }}
+                    </div>
+                    <div class="form-group submit_sec text-center">
+                        {{form.submit(class="submit_sec btn btn-block btn-outline-info")}} 
+                    </div>
+                            
+                 
+                   
+                   
+                </form>
+                <form action="updatepassword" method="POST" class="updateform">
+                    {{form.hidden_tag()}}
+                    <div class="formcontainer d-lg-inlinflex d-md-inline-flex">
+                        {{ passform.password.label(class='labels') }}
+                        {{ passform.password(class='form-element form-control-sm') }}
+                    </div>
+                    <div class="formcontainer d-lg-inlinflex d-md-inline-flex">
+                        {{ passform.password2.label(class='labels') }}
+                        {{ passform.password2(class='form-element form-control-sm') }}
+                    </div>
+                    <div class="form-group submit_sec text-center">
+                        {{passform.submit(class="submit_sec btn btn-block btn-outline-info")}} 
+                    </div>
+                </form>
+        
+                </div>
+            </div>
+            
+        </section>
+       <!-- Button trigger modal -->
+
+
+
+
+<!-- Modal -->
+<!-- <button type="button" class=" btn btn-sm btn-outline-info" data-toggle="modal" data-target="#exampleModalLong"> Add post </button> -->
+
+
+
+
+
+<!--  editModal -->
+<div class="modal fade" id="exampleModalLongTitle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Delete Account</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          
+        <form action="{{url_for('delete_account',user_id = current_user.id)}}">
+            are you sure you want to delete your account ? 
+            <button type="submit" class="btn btn-danger"> confirm</button>
+        </form>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+           
+            <script src="{{url_for('static', filename='bootstrap.min.js')}}"></script> 
+            <script src="{{url_for('static', filename='all.min.js')}}"></script>
+            <!-- <script src="{{url_for('static', filename='javascript/main.js')}}"></script> -->
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    </body>
+</html>

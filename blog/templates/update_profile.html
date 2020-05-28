@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block  head%}
+{{ super() }}
+<title>{{current_user.username}}</title>
+<style>
+    .avatar{
+        width: 80px;
+        height: 80px; border-radius: 50%;
+    }
+</style>
+{% endblock  %}
+{% block content %}
+<section>
+    <div class="row p-5">
+        <div class="col-md-6 col-lg-6 col-sm-8 m-auto bg-info p-4 ">
+           
+                <img src="/static/images/bruno.jpg" alt="" class="img-fluid avatar">
+
+                <form action="account" method="post" enctype="multipart/form-data">
+                    <h3>Update Profile</h3>
+                {{ form.hidden_tag() }}
+                <p class="text-dark ">
+                    {{ form.avatar.label }}
+                  <div class="mail "> {{ form.avatar() }}</div> 
+                </p>
+                <p class="text-dark pl-5">
+                    {{ form.bio.label }}
+                 <div class=" ">    {{ form.bio() }}</div>
+                </p>
+                <p class="text-dark pl-5">
+                    {{ form.full_names.label }}
+                 <div class=" ">    {{ form.full_names() }}</div>
+                </p>
+                <p class="text-dark pl-5">
+                    {{ form.username.label }}
+                 <div class=" ">    {{form.username()}} </div>
+                </p>
+                <p class="text-dark pl-5">
+                    {{ form.profession.label }}
+                 <div class=" ">    {{ form.profession() }}</div>
+                </p>
+                <p class="text-dark pl-5">
+                    {{ form.password.label }}
+                 <div class=" ">    {{ form.password() }}</div>
+                </p>
+                <p class="text-dark pl-5">
+                    {{ form.confirm_password.label }}
+                 <div class=" ">    {{ form.confirm_password() }}</div>
+                </p>
+                <p class="text-center">
+                    {{form.submit(class="btn btn-outline-light")}} 
+                </p>
+               
+            </form>
+        </div>
+        <div class="col-md-4 col-lg-4 d-none d-md-block m-auto bg-success d-lg-block">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, officiis commodi? Similique sapiente saepe repellat facere quas natus itaque obcaecati perspiciatis assumenda, dolore harum eaque exercitationem doloremque blanditiis numquam excepturi!
+        </div>
+
+    </div>
+</section>
+{% endblock content %}

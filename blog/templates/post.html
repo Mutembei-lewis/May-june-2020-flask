@@ -1,0 +1,287 @@
+{% extends 'base.html' %}
+{% block head %}
+{{super()}}
+<style>
+  @media screen and (max-width: 468px){
+
+  }
+  @media screen and (min-width: 469px) and (max-width: 768px){
+
+  }
+  @media screen and (min-width: 768px){
+    .headsec{
+      position: relative;
+      width: 100%;
+      height: 400px;
+      background: url('/static/images/home/americandream.jpg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment:fixed ;
+
+    }
+    .text-container{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding-top: 5%;
+      background-color: rgba(0, 0, 0, 0.428); 
+      
+      background-attachment:fixed ;
+
+    }
+    .post_image{
+      position: relative;
+      width: 100%;
+      height: 300px;
+      margin-bottom: 10px;
+    }
+    .actual_image{
+      position: absolute;
+      width: 80%;
+      height: 90%;
+      transform: translate(10%,5%);
+
+    }
+    .searchbox{
+      border-radius: 20px;
+      border: 1px solid grey;
+      padding-left:8px ;
+      height: 30px;
+    }
+    .searchbox:focus{
+      border-radius: 20px;
+      border: 1px solid grey;
+    }
+    .searchbox:hover{
+      border: 1px solid blue;
+      border-radius: 20px;
+
+    }
+    .avatar{
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+    }
+    .searchform{
+      border: 0px solid white;
+      margin: 5px;
+      height: 60px;
+      padding-top: 20px;
+      padding-left: 5px;
+      border-radius: 8px;
+    }
+    /*author-section*/
+    .author_section{
+      padding: 15px;
+      border: 1px solid grey;
+      border-radius: 12px;
+      height: auto;
+      margin: 5px;
+    }
+    /*end of section*/
+
+        /* button*/
+        .signup{
+          width: 80px;
+          height: 40px;
+          border: 1px solid coral;
+          color: aqua;
+          border-radius: 24px;
+          background: transparent;
+  
+        }
+        .signup:hover{
+          background: white;
+          color: blue;
+        }
+        .post-btn{
+          border-radius: 20px;
+        }
+        .icons{
+          color: black;
+        }
+        .followlinkcss{
+          width: 150px;
+          height: 30px;
+          border: 1px solid rgb(0, 255, 51);
+          border-radius: 20px;
+          margin: 10px auto;
+        }
+      /*end of buttons css */
+      /*comment section*/
+      .commentsection{
+        height: auto;
+        margin: 10px;
+        padding: 10px;
+      }
+      .commentform{
+        height: 40px;
+        width: 80%;
+        border-radius: 20px;
+        border: 1px solid grey;
+        margin: 5px;
+        padding:2px 0px 2px 20px;
+      }
+      .text_area{
+        border-radius: 24px;
+      }
+      /*end of comment section*/
+      /*post highlight section*/
+      .side-container{
+        background-color: white;
+        margin-bottom:8px ;
+        padding: 5px;
+      }
+      .side-title{
+        color:  #ff9908;
+        font-weight: 600;
+        text-align: center;
+      }
+      .popular_images{
+        width: 100px;
+        height: 120px;
+      }
+      .pop_post{
+        padding: 5px;
+        margin: 10px;
+      }
+      /*end of post highlights section*/
+      /* font styling*/
+      .heading{
+        font-size: 3rem;
+        font-weight: 900;
+        letter-spacing: 3px;
+        line-height: 30px;
+        color: white;
+        
+      }
+      .title_post{
+        font-size: 2rem;
+        font-weight: 900;
+        letter-spacing: 3px;
+        line-height: 20px;
+        color: white;
+      }
+      /* end of font styling*/
+          
+  }
+ 
+</style>
+
+{% endblock  %}
+{% block content %}
+ <section>
+   <div class=" headsec">
+     <div class="text-container text-center">
+        <h3 class="heading d-inline"> SINGLE BLOG :</h3> <span class="title_post">  {{post.title}}</span>
+        
+     </div>
+   </div>
+ </section>
+
+<section>
+  <div class="row">
+    <div class="col-md-7 col-lg-7 p-lg-5 p-md-3">
+      <div class="post_image">
+        <img src="/static/images/post/{{post.post_image_location}}" alt="" class="actual_image">
+
+      </div>
+      <div>
+        <h3 class="text-center"> {{post.title}}</h3>
+        <p> {{post.content}}</p>
+
+      </div>
+       
+        {%if post.author == current_user.username%}
+        <a href="{{url_for('update_post',post_id =post.id)}}"> <button class="btn btn-outline-success">edit post </button></a>
+      <button class="btn btn-sm btn-outline-info" data-toggle="modal" data-target="#exampleModal">  delete post</button>  
+        {%else%}
+        {%endif%}  
+        <div class="commentsection">
+          <h5 class=" text-center"> <b> Leave a comment</b> </h5>
+          <form action="{{url_for('add_comment',post_id = post.id)}}" method ='POST'>
+            Name * <br>
+            <input type="text" name='name' class="commentform" placeholder="your name"> <br>
+           <br> Email * <br>
+            <input type="email" name='email' class="commentform" placeholder="your email"> <br>
+            <br> Message <br>
+            <textarea name="message" id="" cols="50" rows="5" class="text_area"></textarea>
+              <button type="submit" class=" btn-info btn"> post comment</button>
+          </form>
+
+
+        </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4 p-lg-5 p-md-3">
+          <div class="searchform">
+            <form action="">
+              <input type="text" class="  searchbox" placeholder="search content">   <button type="submit" class="btn btn-sm btn-outline-info"> search </button>
+            </form>
+
+          </div>
+         
+          <div class="author_section text-center">
+            <h6 class=""> Author: {{user.firstname }} {{user.lastname}}</h6>
+            <img src="/static/images/profiles/{{user.profile_picture}}"  alt="" class="avatar "> <br>
+            <p class="text-left">
+              {{user.bio}}
+
+            </p>
+            <button class="signup"> + follow  </button> <br>
+            <div class="followlinkcss"> <i class="fab fa-github icons"></i></a> </div >  <div class="followlinkcss"> <a href=""> <i class="fab fa-twitter icons"></i></a></div> <div class="followlinkcss"> <a href=""> <i class="fab fa-instagram icons"></i> </a> </div>  
+                 <br>
+            
+          </div>
+          <div class="side-container">
+            <h2 class="side-title"> My Recent post</h2>
+            
+            {%for userpost in userposts%}
+            <a href="{{url_for('post',post_id = userpost.id)}}">
+            <div class="pop_post bg-light d-flex ">
+              <img src="/static/images/post/{{userpost.post_image_location}}" alt="" class="img-fluid popular_images mr-4">
+              <p class=""> {{userpost.title}}  <br>
+             <small> <i class="fas fa-clock"></i> {{userpost.date_created.strftime('%Y %m %d')}}</small>
+             </p>
+            </div>
+          </a>
+            {%endfor%}
+            
+     
+          </div>
+
+
+        </div>
+</div>
+
+</section>
+
+        <!-- *** MODAL SECTION***  -->
+
+<!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action='{{url_for("delete_post",post_id =post.id)}}' method="POST">
+           are you sure you want to delete  this post ? <button type="submit" class="btn btn-outline-danger"> confirm</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div> 
+{% endblock  %}

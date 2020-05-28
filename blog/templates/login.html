@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% block head %}
+{{super()}}
+<title> Log in</title>
+<style>
+   
+    @media screen and (min-width: 420px)
+    {
+        
+    .carrier{
+        border-radius: 24px;
+        background-color: rgba(255, 255, 255, 0.632);
+        width: auto;
+        height: auto;
+    }
+    .input-div{
+
+    }
+}
+    @media screen and (min-width: 768px)
+    {
+        
+    .carrier{
+        border-radius: 24px;
+        background-color: rgba(255, 255, 255, 0.782);
+        width: 40vw;
+        height: 70vh;
+        transform: translateX(60%);
+        margin: 20px;
+    }
+    .input-div{
+       
+        border: 0px none;
+    }
+    .input-div:hover{
+
+
+    }
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     background: linear-gradient(to bottom, rgba(0, 229, 255, 0.462),rgba(8, 87, 184, 0.462),rgba(0, 157, 255, 0.51)), url('static/images/leaf.jpg');
+background-attachment: fixed;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+}
+.labels{
+    color:#FF5500;
+    margin-left: 6px;
+font-weight: 500;
+}
+.content-div{
+    margin: 8px;
+    padding: 5px;
+}
+.submit{
+    width: 50%;
+    margin: 8px;
+    padding: 5px;
+}
+.hyperlink{
+
+}
+.hyperlink:hover{
+    color: #FF5500;
+    text-decoration: none;
+}
+h3{
+    font-weight: 800;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #191970;
+    font-size: 30pt;
+}
+
+</style>
+{% endblock  %}
+{% block  content %}
+
+<section>
+<div class="carrier ">
+
+<form action="login" method="post" >
+        <h3 class="text-center ">Log In</h3>
+    {{ form.hidden_tag() }}
+    <div class="form-group content-div">
+        {{ form.email.label(class='labels') }} <br>
+        {{ form.email(size=32, class='input-div form-control-sm') }}
+    </div>
+    <div class="form-group content-div">
+        {{ form.password.label(class='labels') }}  <br>
+        {{ form.password(size=32, class="input-div form-control-sm") }}
+    </div>
+    <div class="submit">
+        {{form.submit(class="btn  btn-block btn-outline-info")}}  
+    </div>
+    
+<div class="content-div">
+    <small>  Don't have an account? <a href="{{url_for('signup')}}" class="hyperlink"><b>Sign up</b></a><a href='' class="ml-3 hyperlink">  <b> Forgot password</b>  </a></small>
+</div>  
+    
+</form>
+
+ </div>
+</section>
+{% endblock  %}
