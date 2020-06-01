@@ -86,26 +86,51 @@
     </div>
     <div class="row" id="main_section">
         <div class="col-md-7  col-lg-7">
-          {%for post in posts[:5]%}
+          {%for blog  in blogs.items%}
           <div class="recursive_div">
-            <img src="/static/images/post/{{post.post_image_location}}" alt="" class="recursive_image">
+            <img src="/static/images/post/{{blog.post_image_location}}" alt="" class="recursive_image">
             <div class="text_block bg-light">
-               <button class=" btn-danger  category">{{ post.category}} </button>                  <span style="color:grey">  By   {{  post.author }} | {{post.date_created.strftime('%Y-%m-%d')}} </span>
+               <button class=" btn-danger  category">{{ blog.category}} </button>                  <span style="color:grey">  By   {{  blog.author }} | {{blog.date_created.strftime('%Y-%m-%d')}} </span>
                 <br>
-              <h4 class="text-center"> {{post.title}}</h4>
+              <h4 class="text-center"> {{blog.title}}</h4>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                  Inventore delectus tempora ex neque quae unde sapiente ipsum quibusdam nesciunt nemo odit, nisi dolor, 
                 ipsa cumque architecto itaque labore distinctio quisquam.
               </p>
-                 <button class="btn btn-outline-success"> <a href=""> Continue Reading</a> </button>
+                 <button class="btn btn-outline-success"> <a href="{{url_for('post',post_id = blog.id)}}"> Continue Reading</a> </button>
                 </div>            
           </div>
           {%endfor%}
         </div>
        
 
-        <div class="col-md-4 col-lg-4 bg-info mx-auto d-none p-2 d-md-block d-lg-block">
+        <div class="col-md-4 col-lg-4  mx-auto d-none p-2 d-md-block d-lg-block">
+         <div class="side-container">
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control   mr-sm-2" type="search" placeholder="Search posts" aria-label="Search">
+          <a href="" class="fa fa-search"></a>
+        </form>
+        <hr id="breakline">
+        <div class=" text-center">
+          <img src="static/images/home/kingpower.jpg" alt="" id="senior_image"> <br>
+
+         <span>  Lewis Mutembei </span> <br>
+        <span> senior blogger & developer</span> <br>
+         <a href="" class="icon-link"> <i class="fab fa-facebook m-2"></i></a> <a href="" class="icon-link"> <i class="fab fa-twitter m-2"></i></a>  <a href="" class="icon-link"> <i class="fab fa-github m-2"></i> </a>  <a href="" class="icon-link"> <i class="fab fa-instagram m-2"></i></a>
+          <p class="align-left ">
+            Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better  than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+          </p>          
+        </div>
+      </div>
 
         </div>
 
@@ -113,6 +138,26 @@
     </div>
         
 
+</section>
+<section id='pagination'>
+  <div class="" id="pagination-div">
+    
+    <ul class=" pagination-table  " >
+     <li class="prev-next"> <a href="" class="text-dark"> &lt; Prev</a> </li>
+    {%for page in blogs.iter_pages()%}
+    {%if page %}
+    
+    
+    <a href="{{url_for('blog',page_num = page)}} " class="list-item">  <li class=""> {{page}}</li> </a> 
+    
+    {%else%}
+    {%endif%}
+    {%endfor%}
+    <li class="prev-next"><a href="" class="text-dark"> Next  &gt</a>  </li>
+  
+</ul>
+    
+  </div>
 </section>
 
 {%endblock%}

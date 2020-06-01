@@ -3,77 +3,77 @@
 {{super()}}
 <title> Log in</title>
 <style>
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+         background: linear-gradient(to bottom, rgba(0, 229, 255, 0.462),rgba(8, 87, 184, 0.462),rgba(0, 157, 255, 0.51)), url('static/images/leaf.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    }
    
-    @media screen and (min-width: 420px)
-    {
-        
-    .carrier{
-        border-radius: 24px;
-        background-color: rgba(255, 255, 255, 0.632);
-        width: auto;
-        height: auto;
-    }
-    .input-div{
 
-    }
-}
-    @media screen and (min-width: 768px)
+    @media screen and (min-width: 900px)
     {
         
     .carrier{
-        border-radius: 24px;
-        background-color: rgba(255, 255, 255, 0.782);
+        border-radius: 16px;
+        background-color: rgba(255, 255, 255, 0.891);
         width: 40vw;
-        height: 70vh;
-        transform: translateX(60%);
-        margin: 20px;
+        height: 60vh;
+       padding: 20px;
+        margin: 10% 10% 5% 30%;
     }
     .input-div{
-       
+       width: 80%;
         border: 0px none;
     }
-    .input-div:hover{
-
+    .labels{
+        color:#FF5500;
+        margin-left: 6px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    }
+    .content-div{
+        margin: 8px;
+        padding: 5px;
+    }
+    .submit{
+        width: 50%;
+        margin: 8px;
+        padding: 5px;
+    }
+    .hyperlink{
+    
+    }
+    .hyperlink:hover{
+        color: #FF5500;
+        text-decoration: none;
+    }
+    h3{
+        font-weight: 900;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: #191970;
+        font-size:3rem;
 
     }
+   
 }
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-     background: linear-gradient(to bottom, rgba(0, 229, 255, 0.462),rgba(8, 87, 184, 0.462),rgba(0, 157, 255, 0.51)), url('static/images/leaf.jpg');
-background-attachment: fixed;
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center center;
-}
-.labels{
-    color:#FF5500;
-    margin-left: 6px;
-font-weight: 500;
-}
-.content-div{
-    margin: 8px;
-    padding: 5px;
-}
-.submit{
-    width: 50%;
-    margin: 8px;
-    padding: 5px;
-}
-.hyperlink{
+@media screen and (min-width:468px) and (max-width: 900px){
 
+    .carrier{
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.891);
+        width: 40vw;
+        height: 60vh;
+    
+        
+    }
 }
-.hyperlink:hover{
-    color: #FF5500;
-    text-decoration: none;
-}
-h3{
-    font-weight: 800;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #191970;
-    font-size: 30pt;
-}
+
+
 
 </style>
 {% endblock  %}
@@ -83,18 +83,18 @@ h3{
 <div class="carrier ">
 
 <form action="login" method="post" >
-        <h3 class="text-center ">Log In</h3>
+  <h3 class="text-center"> <i class="fa fa-user"></i> Log In </h3>
     {{ form.hidden_tag() }}
     <div class="form-group content-div">
         {{ form.email.label(class='labels') }} <br>
-        {{ form.email(size=32, class='input-div form-control-sm') }}
+        {{ form.email( class='input-div form-control-sm') }}
     </div>
     <div class="form-group content-div">
         {{ form.password.label(class='labels') }}  <br>
-        {{ form.password(size=32, class="input-div form-control-sm") }}
+        {{ form.password( class="input-div form-control-sm") }}
     </div>
     <div class="submit">
-        {{form.submit(class="btn  btn-block btn-outline-info")}}  
+        {{form.submit(class="btn  btn-info mx-auto")}}  
     </div>
     
 <div class="content-div">

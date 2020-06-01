@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% block  head%}
+{{super()}}
+<style>
+    .contact{
+        background-image: linear-gradient(to right,rgba(218, 43, 12, 0.462),rgba(212, 17, 111, 0.476)), url('../static/images/african-theme/sdg18.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 65vh;
+        background-position: bottom center;
+        background-attachment: fixed;
+        position: relative;
+    }
+    .text-message{
+        width: 100%;
+        position: absolute;
+        height: 30%;
+       margin-top: 10%;
+        font-size:3rem ;
+        color: white;
+        
+        padding-left: 40%;
+        font-weight: 900;
+        letter-spacing: 2px;
+    }
+    #main-contact{
+        width: 100%;
+        height: 95vh;
+        background-color: rgb(228, 218, 218);
+        position: relative;
+        display: flex;
+        padding: 20px 80px 20px 80px;
+    }
+    .one{
+        position: absolute;
+      height: 90%;
+      background-color: white;
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      padding: 25px;
+        z-index: 200;
+          /* -webkit-box-shadow: 21px 15px 5px 1px rgba(0,0,0,0.29); -->
+    -moz-box-shadow: 21px 15px 5px 1px rgba(0,0,0,0.29);
+    box-shadow: 21px 15px 5px 1px rgba(0,0,0,0.29); */
+    -webkit-box-shadow: 7px 15px 65px 15px rgba(15, 6, 4, 0.86);
+    -moz-box-shadow: 7px 15px 65px 15px rgba(14, 3, 2, 0.86);
+    box-shadow: 7px 15px 30px 15px rgba(163, 147, 145, 0.86);
+    }
+    .two{
+        position: absolute;
+        height: 90%;
+        background-color: orange;
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+        z-index: 200;
+
+   /* -webkit-box-shadow: 21px 15px 5px 1px rgba(0,0,0,0.29);
+    -moz-box-shadow: 21px 15px 5px 1px rgba(0,0,0,0.29);
+    box-shadow: 21px 15px 5px 1px rgba(0,0,0,0.29); */
+    -webkit-box-shadow: 7px 15px 65px 15px rgba(15, 6, 4, 0.86);
+    -moz-box-shadow: 7px 15px 65px 15px rgba(14, 3, 2, 0.86);
+    box-shadow: 7px 15px 65px 10px rgba(145, 122, 118, 0.86);
+        
+    }
+    .in-touch{
+        width: 100%;
+        height: 200px;
+        padding: 30px;
+    }
+    .one legend{
+        color: rgb(44, 35, 35);
+        font-size: 18px;
+        
+    }
+    .input-one{
+        width: 250px;
+        border-radius: 20px;
+        height: 40px;
+        border: 1px solid darkgray;
+    }
+    .input-two{
+        width: 250px;
+        height: 40px;
+        border-radius: 20px;
+        border: 1px solid darkgray;
+
+    }
+    .circles{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid white;
+        
+        padding: 16px;
+        display: inline;
+    }
+    .about-us{
+
+    }
+    .about-row{
+        padding: 40px;
+        height:400px ;
+        background-color: aqua;
+    }
+   .about-col{
+    height: 300px;
+    background-color: black;
+   }
+</style>
+{% endblock  %}
+{% block content %}
+<div class="contact">
+<div class="text-message">
+    <h1> Contact Us</h1>
+</div>
+</div>
+<section>
+    <div class="w-100 in-touch" >
+        <h3 class="text-center" style=" color: orangered;font-weight: 900;"> GET IN TOUCH </h3>
+        <p class="text-center">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto accusamus a nostrum, <br>
+             libero rem natus iste praesentium. Laborum quaerat corrupti reiciendis aspernatur nisi <br>
+              Dignissimos quis expedita consequuntur quasi voluptate dolor!
+        </p>
+
+    </div>
+   
+</section>
+
+<section>
+    <div id="main-contact" class="row">
+        <div class="col-md-6 col-lg-6 one">
+            <form action="">
+                <legend>Name</legend>
+                <input type="text" placeholder="" class=" input-one"> <br>
+               <legend> Email</legend>
+                <input type="email" placeholder="" class="input-one">  
+                <legend> Subject</legend>
+                <input type="text" class="input-two">
+                <legend> message</legend>
+                <textarea name="" id="" cols="50" rows="5"></textarea>
+                <button type="submit " class="btn btn-info rounded-pill"> post message</button>
+            </form>
+        </div>
+        <div class="col-md-5 col-lg-5 two">
+            <h4>  Our Contacts  </h4> <br> <br>
+            <div class="circles "> <i class="fa fa-map"></i> </div>
+            <span> address </span> 198 West 21th Street <br> <br> <br> <br>
+            <div class="circles"> <i class="fa fa-phone"></i> </div> <span> +254 797-088-336</span> <br> <br> <br> <br>
+            <div class="circles"> <i class="fa fa-envelope"></i></div> <span> teshlewis668@gmail.com</span> <br> <br> <br>
+            <div class="circles"> <i class="fab fa-instagram"></i></div> <span> mywebsite.com</span>
+        </div>
+       
+    </div>
+</section>
+
+{% endblock  %}

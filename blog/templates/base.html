@@ -25,10 +25,10 @@
   </head>
   <body>
 
-<div class="container-fluid ">
+<div class="container-fluid " style="margin-bottom: 70px;">
 
   <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-info">
-      <a class="navbar-brand" href="{{url_for('index')}}"> <img src="/static/images/free_logos_dribbble_ph.jpg" alt=" logo" id="logo" > Blogpedia</a>
+      <a class="navbar-brand" href="{{url_for('index')}}"> <img src="/static/images/african-theme/sdg32.jpg" alt=" logo" id="logo" ><span class="navbrand"> BLOGPEDIA</span></a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -49,7 +49,7 @@
 
         </li>
         <li class="nav-item">
-              <a href=" {{url_for('blog')}}" class="nav-link">Blog </a>
+              <a href=" {{url_for('blog', page_num = 1)}}" class="nav-link">Blog </a>
             </li>
         <li class="nav-item">
           <a class="nav-link " href="{{url_for('gallery')}}">Gallery</a>
@@ -163,7 +163,7 @@
             <div class="social-media"><a href=""> <i class="fab fa-instagram fa-2x  text-light"> </i></a> </div>
       </div>
       <div class="foot text-info text-center">
-              &copy; copyright <b>Techblog</b>. All rights reserved. <br>
+              &copy; copyright <b>Blogpedia</b>. All rights reserved. <br>
               Designed with <i class="fa fa-heart text-danger"></i> by <span class="author"><b> lewie </b> </i></span>
 
       </div>

@@ -210,10 +210,11 @@ def updatepassword():
     return render_template('userpage.html',form=form)
 
 # blog route section
-@app.route('/blog', methods=['GET','POST'])
-def blog():
-    posts = Post.query.order_by(Post.date_created.desc()).all()
-    return render_template('blog.html', posts = posts)
+@app.route('/blog/<int:page_num>', methods=['GET','POST'])
+def blog(page_num):
+    posts = Post.query.all()
+    blogs = Post.query.order_by(Post.date_created.desc()).paginate(per_page =4,page = page_num,error_out =True)
+    return render_template('blog.html', blogs = blogs, posts=posts)
 
 @app.route('/delete_account/<int:user_id>',methods=['GET','POST'])
 def delete_account(user_id):
