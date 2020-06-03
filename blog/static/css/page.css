@@ -84,7 +84,7 @@ label #cancel{
 }
 /*end of side navigation css*/
 section{
-    background-color: rgb(196, 166, 166);
+    background-color: rgb(226, 213, 213);
 }
 .user_intro{
    
@@ -92,9 +92,11 @@ section{
 }
 #userhomediv{
     font-size: 22pt;
-    color: coral;
+    color: white;
     font-weight: 900;
     letter-spacing: 2px;
+    padding: 40px;
+    
     
 }
 
@@ -129,6 +131,7 @@ section{
             border: 1px solid rgb(0, 255, 51);
             border-radius: 20px;
             margin: 10px auto;
+            background-color: rgb(255, 0, 85);
           }
         .signup{
             width: 80px;
@@ -144,18 +147,21 @@ section{
             color: blue;
           }
           .icons{
-            color: black;
+            color: white;
           }
         /*end of buttons css */
         /*  input section css*/
         .labels{
             
         width: 100%;
-        font-weight: 500;
+        font-weight: 800;
+        font-size: 18px;
+        color: #042331;
         }
         .biolabel{
             width: 40%;
-           
+            font-size: 18px;
+            color: #042331;
             margin-top: 0px;
             padding-top: 0px;
 

@@ -25,53 +25,55 @@
   </head>
   <body>
 
-<div class="container-fluid " style="margin-bottom: 70px;">
+
+
+ <div class="container-fluid" class="navcontainer" >
 
   <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-info">
-      <a class="navbar-brand" href="{{url_for('index')}}"> <img src="/static/images/african-theme/sdg32.jpg" alt=" logo" id="logo" ><span class="navbrand"> BLOGPEDIA</span></a>
+    <a class="navbar-brand" href="{{url_for('index')}}"> <img src="/static/images/african-theme/sdg32.jpg" alt=" logo" id="logo" > <span class="navbrand"> BLOGPEDIA</span></a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav m-auto">
-        <li class="nav-item active">
-          <a class="nav-link text-light mr-2" href="{{url_for('index')}}">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{url_for('about')}}">About</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link " href="{{url_for('contact')}}"   >
-            Contact
-          </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-        </li>
-        <li class="nav-item">
-              <a href=" {{url_for('blog', page_num = 1)}}" class="nav-link">Blog </a>
-            </li>
-        <li class="nav-item">
-          <a class="nav-link " href="{{url_for('gallery')}}">Gallery</a>
-        </li>
-        {% if current_user.is_authenticated%}
-            <li class="nav-item">
-              <a href=" {{url_for('account')}}" class="nav-link text-dark">Account </a>
-            </li>
-          </ul>
-            <button class="btn btn-outline-info m-2 my-sm-0" action ="" type="submit"><a  class= "mylink text-light"href="{{url_for('logout')}}"> Log Out </a></button>
-             {%else%}
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav m-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-light mr-2" href="{{url_for('index')}}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('about')}}">About</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link " href="{{url_for('contact')}}"   >
+          Contact
+        </a>
+
+      </li>
+      <li class="nav-item">
+            <a href=" {{url_for('blog', page_num = 1)}}" class="nav-link">Blog </a>
+          </li>
+      <li class="nav-item">
+        <a class="nav-link " href="{{url_for('gallery')}}">Gallery</a>
+      </li>
+      {% if current_user.is_authenticated%}
+          <li class="nav-item">
+            <a href=" {{url_for('account')}}" class="nav-link text-dark">Account </a>
+          </li>
+        </ul>
+          <button class="btn btn-outline-info m-2 my-sm-0" action ="" type="submit"><a  class= "mylink text-light"href="{{url_for('logout')}}"> Log Out </a></button>
+           {%else%}
+        
+          <button class="btn btn-outline-info login-signup mr-5 my-sm-0" action ="/register" type="submit"><a  class= "mylink text-light"href="{{url_for('signup')}}"> Register</a></button>
           
-            <button class="btn btn-outline-info login-signup mr-5 my-sm-0" action ="/register" type="submit"><a  class= "mylink text-light"href="{{url_for('signup')}}"> Register</a></button>
-            
-            <button class="btn btn-outline-success mr-0 my-sm-0" action= "/login" type="submit"><a  class= "mylink text-light"href="{{ url_for('login')}}">Log In </a></button>
-          
-            {%endif%}
-      
-     
-    </div>
-  </nav>
-</div>
+          <button class="btn btn-outline-success mr-0 my-sm-0" action= "/login" type="submit"><a  class= "mylink text-light"href="{{ url_for('login')}}">Log In </a></button>
+        
+          {%endif%}
+    
+   
+  </div>
+</nav>
+ </div>
 
 
  
@@ -96,7 +98,7 @@
 <section>
   <div class="footdiv">
       <div class="row ">
-          <div class="col-md-3 footcard mx-auto "> 
+          <div class="col-md-3 col-lg-3 col-sm-10 footcard mx-lg-auto  "> 
               <h5 class="text-center footerheading"> ABOUT TECHBLOG</h5>
               <small>
                Nulla laborum quia quam dolorem explicabo Nulla laborum quia quam dolorem explicabo adipisci at sequi beatae quidem <br>
@@ -105,7 +107,7 @@
                <button type="" class="signup"> Sign up</button> </p>
               </small>
           </div>
-          <div class="col-md-3 footcard mx-auto px-5 "><small> <h5 class="footerheading"> INFORMATION</h5>
+          <div class="col-md-3 col-lg-4  col-sm-10 footcard mx-lg-auto px-lg-5 "><small> <h5 class="footerheading"> INFORMATION</h5>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
               <p>
                   <span class="text-light bolder"> <i class="fa fa-phone"></i>: </span>+254 797 088 336
@@ -120,19 +122,19 @@
             </small>
           </div>
           
-          <div class="col-md-3 footcard ">
+          <div class="col-md-4  col-lg-3  col-sm-10 footcard ">
             <h5 class="footerheading "> INSTAGRAM FEED</h5> <br>
             <div class="holder-feed mt-sm-1">
               <div class="d-inline  feed_card">
-                <img src="/static/images/home/germanshepherd.jpg" alt="" class="instagram_feed">
+                <img src="/static/images/home/germanshepherd.jpg" alt="" class="instagram_feed ">
   
                 </div>
                 <div class="d-inline feed_card">
-                  <img src="/static/images/home/anchor.jpg" alt="" class="instagram_feed">
+                  <img src="/static/images/home/blog-7.jpg" alt="" class="instagram_feed ">
                   
                  </div>
                  <div class="d-inline feed_card  ">
-                  <img src="/static/images/home/network.jpg" alt="" class="instagram_feed">
+                  <img src="/static/images/home/blog-5.jpg" alt="" class="instagram_feed ">
                   
                  </div>
 
@@ -140,15 +142,15 @@
              
                <div class="mt-1 holder-feed">
                 <div class="d-inline feed_card">
-                  <img src="/static/images/home/fruity.jpg" alt="" class="instagram_feed">
+                  <img src="/static/images/home/blog-4.jpg" alt="" class="instagram_feed ">
     
                   </div>
                   <div class="d-inline feed_card">
-                    <img src="/static/images/home/tesla.jpg" alt="" class="instagram_feed">
+                    <img src="/static/images/home/tesla.jpg" alt="" class="instagram_feed ">
                     
                    </div>
                    <div class="d-inline feed_card">
-                    <img src="/static/images/home/ramon.jpg" alt="" class="instagram_feed">
+                    <img src="/static/images/home/ramon.jpg" alt="" class="instagram_feed ">
                     
                    </div>
                </div>
@@ -157,10 +159,10 @@
       </div>
       <div id="media-container" class="text-light">
           <span class="pr-sm-3"> follow  on social media </span>
-           <div class="social-media"> <a href=""> <i class="fab fa-facebook fa-2x text-light"></i></a></div> 
-           <div class="social-media"> <a href=""> <i class="fab fa-twitter fa-2x text-light" ></i></a> </div>
-            <div class="social-media"><a href=""> <i class=" fab fa-github fa-2x text-light"></i></a></div> 
-            <div class="social-media"><a href=""> <i class="fab fa-instagram fa-2x  text-light"> </i></a> </div>
+           <div class="social-media"> <a href=""> <i class="fab fa-facebook  text-light"></i></a></div> 
+           <div class="social-media"> <a href=""> <i class="fab fa-twitter  text-light" ></i></a> </div>
+            <div class="social-media"><a href=""> <i class=" fab fa-github  text-light"></i></a></div> 
+            <div class="social-media"><a href=""> <i class="fab fa-instagram text-light"> </i></a> </div>
       </div>
       <div class="foot text-info text-center">
               &copy; copyright <b>Blogpedia</b>. All rights reserved. <br>

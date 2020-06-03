@@ -9,17 +9,116 @@
     text-align: center;
   }
 /*end of general css footer code*/
-@media screen and (min-width:900px){
+
+
+@media screen and (min-width:320px ) and (max-width: 360px){
   body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 18px;
 }
 /* css for my logo*/
 #logo{
-  width: 50px;
-  height: 50px; 
+  width: 60px;
+  height: 60px; 
+  border-radius:34px;
+
+}
+/*end of logo css*/
+  /* navbar brand*/
+  .navbrand{
+    font-size: 18px;
+    color: white;
+    text-decoration: solid;
+    font-weight: 800;
+    
+  }
+  /* end of Navbar brand*/
+     /*footer css*/
+     .footdiv{
+        background-color: #000000d9;
+       
+    }
+    .foot{
+        background-color:rgba(0, 0, 0, 0.755);
+    }
+   
+  
+    a:hover{
+        text-decoration: none;
+    }
+    .footerheading{
+        color: #5218FA;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .instagram_feed{
+      width: 70px;
+      height: 70px;
+    }
+    .holder-feed{
+      background-color: none;
+    }
+   
+    .footcard{
+
+        color: white;
+        font-weight: 300;
+        
+        margin: auto;
+
+    }
+    #media-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        font-size: 1rem;
+
+    }
+    .social-media{
+
+      
+        background: transparent;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 0px;
+        margin-left: 15px;
+        padding: 7px;
+        
+    }
+    .social-media:hover{
+      border: 1px solid rgb(255, 51, 0);
+
+    }
+    .signup{
+      width: 80px;
+      height: 40px;
+      border: 1px solid coral;
+      color: aqua;
+      border-radius: 24px;
+      background: transparent;
+
+    }
+    .signup:hover{
+      background: white;
+      color: blue;
+    }
+      /*end of footer css*/
+}
+@media screen and (min-width: 361px) and (max-width:400px){
+  body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+/* css for my logo*/
+#logo{
+  width: 60px;
+  height: 60px; 
   border-radius:34px;
 
 }
@@ -104,115 +203,504 @@
     }
       /*end of footer css*/
 }
-
-
-@media screen and (min-width:420px){
-     /*footer css */
-  
-  .instagram_feed{
-    width: 80px;
-    height: 80px;
-  }
-  .footdiv{
-    background-color: #000000d9;
- 
-   
-}
-
-.foot{
-    background-color:rgba(0, 0, 0, 0.755);
-    font-size: 1rem;
-}
-
-a:hover{
-    text-decoration: none;
-}
-.footerheading{
-    color: orange;
-    font-size: 17px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.feed_card{
-
-
-
-}
-.holder-feed{
-  margin-left: 10px;
-}
-
-.footcard{
-
-    color: white;
-    font-weight: 300;
-    
-    
-    
-}
-#media-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70px;
-    font-size: 0.8rem;
-
-}
-.social-media{
-
-    text-align: left;
-    background:transparent;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 0px;
-    margin-right: 15px;
-    padding: 7px;
-    
-}
-.social-media:hover{
-  border: 1px solid rgb(255, 51, 0);
-
-}
-.signup{
-  width: 80px;
-  height: 40px;
-  border: 1px solid coral;
-  color: aqua;
-  border-radius: 24px;
-  background: transparent;
-
-}
-.signup:hover{
-  background: white;
-  color: blue;
-}
-  
-  /* end of footer css*/
-}
-@media screen and (min-width:468px) and (max-width:900px){
+@media screen and (min-width: 401px) and (max-width:420px){
   body{
-    font-size: 14px;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-  }
+    font-size: 18px;
+}
+/* css for my logo*/
+#logo{
+  width: 60px;
+  height: 60px; 
+  border-radius:34px;
+
+}
+/*end of logo css*/
+/* navcontainer*/
+.navcontainer{
+  margin-bottom:20px;
+}
+/* end of nav container*/
+
   /* navbar brand*/
   .navbrand{
-    font-size:10px;
+    font-size: 18px;
     color: white;
     text-decoration: solid;
-    font-weight: 500;
+    font-weight: 800;
     
   }
   /* end of Navbar brand*/
-  /* css for my logo*/
+     /*footer css*/
+     .footdiv{
+        background-color: #000000d9;
+       
+    }
+    .foot{
+        background-color:rgba(0, 0, 0, 0.755);
+    }
+   
+  
+    a:hover{
+        text-decoration: none;
+    }
+    .footerheading{
+        color: #5218FA;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .instagram_feed{
+      width: 70px;
+      height: 70px;
+    }
+    .holder-feed{
+      background-color: none;
+    }
+   
+    .footcard{
+
+        color: white;
+        font-weight: 300;
+        padding: 12px;
+        margin-left: 22px;
+    }
+    #media-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        font-size: 1rem;
+
+    }
+    .social-media{
+
+      
+        background: transparent;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 0px;
+        margin-left: 10px;
+        padding: 4px;
+        font-size: 15px;
+        
+    }
+    .social-media:hover{
+      border: 1px solid rgb(255, 51, 0);
+
+    }
+    .signup{
+      width: 80px;
+      height: 40px;
+      border: 1px solid coral;
+      color: aqua;
+      border-radius: 24px;
+      background: transparent;
+
+    }
+    .signup:hover{
+      background: white;
+      color: blue;
+    }
+      /*end of footer css*/
+}
+@media screen and ( min-width:421px ) and (max-width: 768px){
+  body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+/* css for my logo*/
 #logo{
-  width: 30px;
-  height: 30px; 
+  width: 50px;
+  height: 50px; 
+  border-radius:34px;
+
+}
+/*end of logo css*/
+
+/* navcontainer*/
+.navcontainer{
+  margin-bottom:40px;
+}
+/* end of nav container*/
+
+  /* navbar brand*/
+  .navbrand{
+    font-size: 18px;
+    color: white;
+    text-decoration: solid;
+    font-weight: 800;
+    
+  }
+  /* end of Navbar brand*/
+     /*footer css*/
+     .footdiv{
+        background-color: #000000d9;
+       
+    }
+    .foot{
+        background-color:rgba(0, 0, 0, 0.755);
+    }
+   
+  
+    a:hover{
+        text-decoration: none;
+    }
+    .footerheading{
+        color: #5218FA;
+        font-size: 17px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .instagram_feed{
+      width: 70px;
+      height: 70px;
+    }
+    .holder-feed{
+      background-color: none;
+    }
+   
+    .footcard{
+
+        color: white;
+        font-weight: 300;
+        padding: 12px;
+        margin-left: 40px;
+    }
+    #media-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        font-size: 1rem;
+
+    }
+    .social-media{
+
+      
+        background: transparent;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 0px;
+        padding-left: 6px;
+        margin-left: 15px;
+        padding: 0px;
+        font-size: 30px;
+        
+    }
+    .social-media:hover{
+      border: 1px solid rgb(255, 51, 0);
+
+    }
+    .signup{
+      width: 80px;
+      height: 40px;
+      border: 1px solid coral;
+      color: aqua;
+      border-radius: 24px;
+      background: transparent;
+
+    }
+    .signup:hover{
+      background: white;
+      color: blue;
+    }
+      /*end of footer css*/
+
+}
+@media screen and (min-width:769px) and (max-width:960px){
+  body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+/* css for my logo*/
+#logo{
+  width: 50px;
+  height: 50px; 
   border-radius:50%;
 
 }
 /*end of logo css*/
+  /* navbar brand*/
+  .navbrand{
+    font-size: 18px;
+    color: white;
+    text-decoration: solid;
+    font-weight: 800;
+    
+  }
+  /* end of Navbar brand*/
+     /*footer css*/
+     .footdiv{
+        background-color: #000000d9;
+       
+    }
+    .foot{
+        background-color:rgba(0, 0, 0, 0.755);
+    }
+   
+  
+    a:hover{
+        text-decoration: none;
+    }
+    .footerheading{
+        color: #5218FA;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .instagram_feed{
+      width: 70px;
+      height: 70px;
+    }
+    .holder-feed{
+      background-color: none;
+    }
+   
+    .footcard{
+
+        color: white;
+        font-weight: 300;
+        padding: 12px;
+    }
+    #media-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        font-size: 1rem;
+
+    }
+    .social-media{      
+        background: transparent;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 0px;
+        margin-left: 15px;
+        padding: 7px;
+        
+    }
+    .social-media:hover{
+      border: 1px solid rgb(255, 51, 0);
+
+    }
+    .signup{
+      width: 80px;
+      height: 40px;
+      border: 1px solid coral;
+      color: aqua;
+      border-radius: 24px;
+      background: transparent;
+
+    }
+    .signup:hover{
+      background: white;
+      color: blue;
+    }
+      /*end of footer css*/
+
+}
+
+
+
+@media screen and (min-width: 961px) and (max-width: 1200px){
+  /* * css for my logo*/ *
+#logo{
+  width: 60px;
+  height: 60px; 
+  border-radius:34px;
+
+}
+/*end of logo css*/
+  /* navbar brand*/
+  .navbrand{
+    font-size: 18px;
+    color: white;
+    text-decoration: solid;
+    font-weight: 800;
+    
+  }
+  /* end of Navbar brand*/
+
+  /* navcontainer*/
+.navcontainer{
+  margin-bottom:90px;
+}
+/* end of nav container*/
+
+     /*footer css*/
+     .footdiv{
+        background-color: #000000d9;
+       
+    }
+    .foot{
+        background-color:rgba(0, 0, 0, 0.755);
+    }
+   
+  
+    a:hover{
+        text-decoration: none;
+    }
+    .footerheading{
+        color: #5218FA;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .instagram_feed{
+      width: 50px;
+      height: 50px;
+    }
+    .holder-feed{
+      background-color: none;
+    }
+   
+    .footcard{
+
+        color: white;
+        font-weight: 300;
+        padding: 12px;
+    }
+    #media-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        font-size: 1rem;
+
+    }
+    .social-media{
+
+      
+        background: transparent;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 0px;
+        margin-left: 15px;
+        padding: 7px;
+        
+    }
+    .social-media:hover{
+      border: 1px solid rgb(255, 51, 0);
+
+    }
+    .signup{
+      width: 80px;
+      height: 40px;
+      border: 1px solid coral;
+      color: aqua;
+      border-radius: 24px;
+      background: transparent;
+
+    }
+    .signup:hover{
+      background: white;
+      color: blue;
+    }
+      /*end of footer css*/
+  
+}
+
+
+@media screen and (min-width:1201px){
+    /* * css for my logo*/ *
+#logo{
+  width: 60px;
+  height: 60px; 
+  border-radius:34px;
+
+}
+/*end of logo css*/
+/* navcontainer*/
+.navcontainer{
+  margin-bottom:80px;
+}
+/* end of nav container*/
+  /* navbar brand*/
+  .navbrand{
+    font-size: 18px;
+    color: white;
+    text-decoration: solid;
+    font-weight: 800;
+    
+  }
+  /* end of Navbar brand*/
+     /*footer css*/
+     .footdiv{
+        background-color: #000000d9;
+       
+    }
+    .foot{
+        background-color:rgba(0, 0, 0, 0.755);
+    }
+   
+  
+    a:hover{
+        text-decoration: none;
+    }
+    .footerheading{
+        color: #5218FA;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .instagram_feed{
+      width: 50px;
+      height: 50px;
+    }
+    .holder-feed{
+      background-color: none;
+    }
+   
+    .footcard{
+
+        color: white;
+        font-weight: 300;
+        padding: 12px;
+    }
+    #media-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        font-size: 1rem;
+
+    }
+    .social-media{
+
+      
+        background: transparent;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 0px;
+        margin-left: 15px;
+        padding: 7px;
+        
+    }
+    .social-media:hover{
+      border: 1px solid rgb(255, 51, 0);
+
+    }
+    .signup{
+      width: 80px;
+      height: 40px;
+      border: 1px solid coral;
+      color: aqua;
+      border-radius: 24px;
+      background: transparent;
+
+    }
+    .signup:hover{
+      background: white;
+      color: blue;
+    }
+      /*end of footer css*/ 
+  
 }

@@ -1,9 +1,10 @@
 from blog import db,app,login_manager
 from werkzeug.security import generate_password_hash,check_password_hash
 from flask_login import UserMixin 
-# from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 
 @login_manager.user_loader
+
 def load_user(user_id):
     return User.query.get(user_id)
 
@@ -49,11 +50,28 @@ class User (UserMixin,db.Model):
     posts = db.relationship('Post', backref='user', lazy=True)
     
 
+    def get_reset_token(self,expires_sec = 1800):
+            s=  Serializer(app.config['SECRET_KEY'],expires_sec)
+            return s.dumps({'user_id': self.id}).decode('utf-8')
+
     def check_password(self,password):
             return check_password_hash(self.password_hash,password )
-    ### REPRESENTATION METHOD CODE GOES HERE ###
-    # def __repr__(self):
-    #     return '<User %r>' % (self.username)
+   
+    
+
+    @staticmethod
+    def verify_reset_token(token):
+            s= Serializer(app.config['SECRET_KEY'])
+            try:
+                user_id = s.loads(token)['user_id']
+            except:
+                return None
+            return User.query.get(user_id)
+     ### REPRESENTATION METHOD CODE GOES HERE ###
+     
+    def __repr__(self):
+            return f"User('{self.username}', '{self.email}')"
+
 
 class Comment(db.Model):
     __tablename__ = 'comments'

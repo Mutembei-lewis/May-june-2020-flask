@@ -28,7 +28,7 @@
             <header> My Account</header>
             <ul>
                 <li> <a href="{{url_for('index')}}">  <i class="fa fa-home"> </i> Home</a>  </li> 
-                <li> <a href="{{url_for('blog')}}"> <i class="fa fa-blog">  </i>Blog</a></li>
+                <li> <a href="{{url_for('blog',page_num =1)}}"> <i class="fa fa-blog">  </i>Blog</a></li>
                 <li>  <a href="{{url_for('add_post')}}">  <i class="fa fa-plus"></i>  post</a></li>
 
                 <li> <a href="{{url_for('about')}}">  About Us </a></li>
@@ -41,19 +41,20 @@
         <!-- end of side navigation section -->
         <section>
             <div class="user_intro"
-             style="background: url('static/images/2.jpg');    
+             style="background: url('/static/images/home/1.jpg');    
             background-size: cover;
             background-repeat: no repeat;
             background-position: center center;
             background-attachment: fixed;
-            height: 60vh;" >
+            height: 70vh;" >
 
-           <p class="text-center " id="userhomediv">
+           <div class="text-center " id="userhomediv">
+            <h1> Title</h1>
             Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. 
             Fugit corporis <br> eum ea officia,
       
             
-           </p>
+           </div>
             </div>
             
             

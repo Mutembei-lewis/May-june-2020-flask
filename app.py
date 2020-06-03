@@ -1,6 +1,6 @@
 from flask import render_template,url_for,request,flash,redirect,abort
-from blog import app,admin
-from blog.Forms import PostForm,UpdatePasswordForm, UpdateBioForm,RegistrationForm,LoginForm
+from blog import app,admin,mail
+from blog.Forms import PostForm,UpdatePasswordForm, UpdateBioForm,RegistrationForm,LoginForm,ResetPasswordForm,RequestResetForm
 from blog.models import db,Post,User,Comment
 import datetime
 from flask_login import login_user,login_required,logout_user,UserMixin,current_user
@@ -9,6 +9,7 @@ import os
 from werkzeug.security import generate_password_hash
 import string
 from flask_admin.contrib.sqla import ModelView
+from flask_mail import Message
 
 ### FLASK-ADMIN  VIEW SHOULD BE ADDED DOWN HERE###
 # admin.add_view(ModelView(User,db.session))
@@ -251,6 +252,52 @@ def about():
 @app.route('/gallery',methods=['GET','POST'])
 def gallery():
     return render_template('gallery.html')
+
+#  RESET PASSWORD SECTION CODE
+
+def send_reset_email(user):
+    token = user.get_reset_token()
+    msg = Message('Password Reset Request',sender='lewismutembei001@gmail.com',recipients=[user.email])
+    msg.body =f''' To reset your password,visit the following link:
+{url_for('reset_token', token =token,_external =True)}
+
+If you did not make this request then simply ignore this email and no changes will be made 
+'''
+    mail.send(msg)
+
+
+@app.route('/reset_password',methods=['GET','POST'])
+def reset_request():
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
+    form = RequestResetForm()
+    if  form.validate_on_submit():
+        user = User.query.filter_by(email=form.email.data).first()
+        send_reset_email(user)
+        flash('An email has been sent with instructions to reset  your password ','info')
+        return redirect(url_for('login'))
+    return render_template('reset_request.html', title ="Reset Password", form = form)
+
+@app.route('/reset_password/<token>',methods=['GET','POST'])
+def reset_token(token):
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
+    user = User.verify_reset_token(token)
+    if user is None:
+        flash('That token is invalid or expires','warning')
+        return redirect(url_for('reset_request'))
+    form = ResetPasswordForm()
+    if form.validate_on_submit():
+        password_hash = generate_password_hash(form.password.data)
+        user.password_hash= password_hash
+        db.session.commit()
+        flash("Your password has been updated! You can now login")
+        return redirect(url_for('login'))
+
+
+
+    return render_template('reset_token.html', title = "Reset Password",form=form)
+
 
 @app.errorhandler(404)
 def not_found(error):
