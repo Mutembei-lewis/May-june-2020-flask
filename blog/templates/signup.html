@@ -77,6 +77,9 @@ h3{
     color: #191970;
     font-size: 30pt;
 }
+.header-section{
+    margin-top: 60px;
+}
 .submit{
 width: 50%;
 margin-top: 6px;
@@ -87,7 +90,7 @@ margin-left: 15px;
 {% endblock  %}
 {% block  content %}
 
-<section class="mt-5">
+<section class="header-section">
     <div class=" formdiv mt-5">
     <form action="" method="post">
         {{ form.hidden_tag() }}
