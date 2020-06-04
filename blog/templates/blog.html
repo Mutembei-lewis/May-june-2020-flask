@@ -93,10 +93,8 @@
                <button class=" btn-danger  category">{{ blog.category}} </button>                  <span style="color:grey">  By   {{  blog.author }} | {{blog.date_created.strftime('%Y-%m-%d')}} </span>
                 <br>
               <h4 class="text-center"> {{blog.title}}</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Inventore delectus tempora ex neque quae unde sapiente ipsum quibusdam nesciunt nemo odit, nisi dolor, 
-                ipsa cumque architecto itaque labore distinctio quisquam.
+              <p class="content-holder">
+               {{blog.content}}
               </p>
                  <button class="btn btn-outline-success"> <a href="{{url_for('post',post_id = blog.id)}}"> Continue Reading</a> </button>
                 </div>            
@@ -113,7 +111,7 @@
         </form>
         <hr id="breakline">
         <div class=" text-center">
-          <img src="static/images/home/kingpower.jpg" alt="" id="senior_image"> <br>
+          <img src="/static/images/icons/goal12.png" alt="" id="senior_image"> <br>
 
          <span>  Lewis Mutembei </span> <br>
         <span> senior blogger & developer</span> <br>

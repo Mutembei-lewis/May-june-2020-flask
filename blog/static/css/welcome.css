@@ -2766,7 +2766,7 @@ box-shadow: 7px 15px 30px 15px rgba(163, 147, 145, 0.86);
             }
             .blog-section{
               padding: 0px;
-              height: 1600px;
+              height: 1900px;
               position: relative;
           
               
@@ -2845,7 +2845,7 @@ box-shadow: 7px 15px 30px 15px rgba(163, 147, 145, 0.86);
             }
             .highlight{
               position: relative;
-              height: 510px;
+              height: 560px;
               margin-bottom: 80px;
                  /* -webkit-box-shadow: 21px 15px 5px 1px rgba(0,0,0,0.29); -->
     -moz-box-shadow: 21px 15px 5px 1px rgba(0,0,0,0.29);
@@ -2856,7 +2856,7 @@ box-shadow: 7px 15px 30px 15px rgba(163, 147, 145, 0.86);
 
             }
             .content_highlight{
-              height: 80px;
+              height: 50px;
               overflow:hidden
             }
             .highlight img{
@@ -2917,7 +2917,12 @@ box-shadow: 7px 15px 30px 15px rgba(163, 147, 145, 0.86);
               margin-left:  300px;
               width: 250px;
               background-color: #ff9908;
+              position:absolute ;
 
+            }
+            .readmore-section{
+              height: 100px;
+              position: relative;
             }
             /* header css*/
             .header-section{

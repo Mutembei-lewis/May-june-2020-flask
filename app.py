@@ -88,7 +88,7 @@ def update_post(post_id):
             db.session.commit()
             file.save(os.path.join(app.config['POST_UPLOAD_FOLDER'],filename))
             flash('Your post has been updated!','success')
-            return redirect(url_for('blog'))
+            return redirect(url_for('blog ',page_num = 1))
 
     if request.method =='GET':
         form.title.data = post.title

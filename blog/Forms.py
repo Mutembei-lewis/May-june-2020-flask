@@ -28,7 +28,7 @@ class PostForm(FlaskForm):
 class RegistrationForm(FlaskForm):
     username = StringField('Username:', validators=[DataRequired()])
     email = StringField('Email:', validators=[DataRequired(), Email()])
-    password = PasswordField('Password:', validators=[DataRequired(),Length(min=6, max=12)])
+    password = PasswordField('Password:', validators=[DataRequired(),Length(min=8)])
     password2 = PasswordField(
         'Repeat Password', validators=[DataRequired(), EqualTo('password',message='The passwords must match')])
     submit = SubmitField('Register')

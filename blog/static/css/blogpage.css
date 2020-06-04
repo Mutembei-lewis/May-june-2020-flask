@@ -13,7 +13,7 @@ a:hover{
 @media screen and (min-width:768px){
     /* css styling for the first section of this page*/
     #headsec{
-        margin-top: 60px;
+        margin-top: 80px;
         margin-bottom: 60px;
         padding: 0px;
     }
@@ -47,12 +47,13 @@ a:hover{
         margin: 0px;
         color: white;
         padding: 15px;
+        overflow: hidden;
     }
      /* css for category button*/
      .category{
         border-radius: 5px;
-        width: 80px;
-        height: 30px;
+        width: 120px;
+        height: 40px;
         border: 1px solid red;
         color: white;
         font-size: 0.8rem;
@@ -82,7 +83,10 @@ a:hover{
 
     } 
     /* end of css from this section*/
-
+.content-holder{
+  height: 100px;
+  overflow: hidden;
+}
 
     /* second section css code */
     #main_section{

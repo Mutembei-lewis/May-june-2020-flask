@@ -2,10 +2,15 @@
 {% block head %}
 {{super()}}
 <title> post update </title>
+<style>
+    .header-content{
+        margin-top: 80px;
+    }
+</style>
 {% endblock  %}
 {% block content %}
 <section>
-    <div class="row px-2 py-4 justify-content-around ">
+    <div class="row px-2 py-4 justify-content-around header-content">
        <div class="col-md-8 col-lg-8 col-sm-12  add-post text-dark">
           <form action="" enctype="multipart/form-data" method="POST">
             
