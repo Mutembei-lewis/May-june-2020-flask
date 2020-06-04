@@ -1,1 +1,1 @@
-web: gunicorn app:scpblogpedia
+web: gunicorn app:app
