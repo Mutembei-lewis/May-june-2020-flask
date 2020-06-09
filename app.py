@@ -301,12 +301,12 @@ def reset_token(token):
 
 @app.errorhandler(404)
 def not_found(error):
-    return "Kuna Shida Kwa Server: {}".format(error), 404
+    return render_template('404.html')
 
 
 @app.errorhandler(500)
 def internal_error(error):
-    return "There is an internal server error: {}".format(error), 500
+    return render_template('500.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

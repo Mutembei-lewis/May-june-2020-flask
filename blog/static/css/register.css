@@ -1,0 +1,302 @@
+@media screen and  (min-width:769px){
+    .formdiv{
+    
+        background-color: rgba(255, 255, 255, 0.938);
+        width: 45vw;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        height: 90vh;
+        transform: translateX(45%);
+        
+        
+        justify-content: center;
+        padding: 8px;
+        border-radius: 24px;
+        z-index: 900;
+        
+    
+    
+    
+    }
+    .formcontainer{
+     padding-left: 10px;
+     margin-bottom: 8px;
+     margin-left: 10px;
+     
+    
+       
+    }
+    div a{
+    
+    }
+    div a:hover{
+        text-decoration: none;
+        color: white;
+    }
+    .form-element{
+        border: 0px none;
+      
+        margin-left: 3px;
+        margin-left: 6px;
+        background-color: rgba(255, 255, 255, 0.741);
+    
+    }
+    .form-element:hover{
+    border-radius: 6px;
+    border: 1px solid blue;
+    background-color: #fff;
+    }
+    .form-element:active{
+    background-color: #fff;
+    }
+    .labels{
+        color:#FF5500;
+        margin-left: 6px;
+    font-weight: 500;
+    }
+    h3{
+        
+        font-weight: 800;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: #191970;
+        font-size: 30pt;
+    }
+    .header-section{
+        margin-top: 120px;
+    }
+    
+    .submit{
+    width: 50%;
+    margin-top: 6px;
+    margin-left: 15px;
+    }
+}
+@media screen and (min-width:421px) and (max-width:768px){
+
+    .formdiv{
+    
+        background-color: rgba(255, 255, 255, 0.938);
+        width: 80vw;
+        margin-top: 40px;
+        margin-bottom: 5px;
+        height: auto;
+        transform: translateX(10%);
+        
+        
+        justify-content: center;
+        padding: 8px;
+        border-radius: 24px;
+        z-index: 900;
+        
+    
+    
+    
+    }
+    .formcontainer{
+     padding-left: 10px;
+     margin-bottom: 8px;
+     margin-left: 10px;
+     
+    
+       
+    }
+    div a{
+    
+    }
+    div a:hover{
+        text-decoration: none;
+        color: white;
+    }
+    .form-element{
+        border: 0px none;
+      
+        margin-left: 3px;
+        margin-left: 6px;
+        background-color: rgba(255, 255, 255, 0.741);
+    
+    }
+    .form-element:hover{
+    border-radius: 6px;
+    border: 1px solid blue;
+    background-color: #fff;
+    }
+    .form-element:active{
+    background-color: #fff;
+    }
+    .labels{
+        color:#FF5500;
+        margin-left: 6px;
+    font-weight: 500;
+    font-size: 1rem;
+    }
+    h3{
+        
+        font-weight: 800;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: #191970;
+        font-size: 20pt;
+    }
+    .header-section{
+        margin-top: 90px;
+    }
+    
+    .submit{
+    width: 50%;
+    margin-top: 6px;
+    margin-left: 15px;
+    }
+}
+
+@media screen and (min-width:400px) and (max-width:420px){
+  
+    
+    .formdiv{
+    
+        background-color: rgba(255, 255, 255, 0.938);
+        width: 100vw;
+        margin-top: 40px;
+        margin-bottom: 0px;
+        height: auto;
+       
+        
+        
+        justify-content: center;
+        padding: 8px;
+        border-radius: 0px;
+        z-index: 0;
+        
+    
+    
+    
+    }
+    .formcontainer{
+     padding-left: 10px;
+     margin-bottom: 8px;
+     margin-left: 10px;
+     
+    
+       
+    }
+    div a{
+    
+    }
+    div a:hover{
+        text-decoration: none;
+        color: white;
+    }
+    .form-element{
+        border: 0px none;
+      
+        margin-left: 3px;
+        margin-left: 6px;
+        background-color: rgba(255, 255, 255, 0.741);
+    
+    }
+    .form-element:hover{
+    border-radius: 6px;
+    border: 1px solid blue;
+    background-color: #fff;
+    }
+    .form-element:active{
+    background-color: #fff;
+    }
+    .labels{
+        color:#FF5500;
+        margin-left: 6px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    }
+    h3{
+        
+        font-weight: 800;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: #191970;
+        font-size: 15pt;
+    }
+    .header-section{
+        margin-top: 80px;
+    }
+    
+    .submit{
+    width: 50%;
+    margin-top: 6px;
+    margin-left: 15px;
+    }
+}
+
+@media screen and (min-width:321px) and (max-width:400px){
+    
+    
+    .formdiv{
+    
+        background-color: rgba(255, 255, 255, 0.938);
+        width: 100vw;
+        margin-top: 40px;
+        margin-bottom: 5px;
+        height: auto;
+       
+        
+        
+        justify-content: center;
+        padding: 8px;
+        border-radius: 0px;
+        z-index: 0;
+        
+    
+    
+    
+    }
+    .formcontainer{
+     padding-left: 10px;
+     margin-bottom: 8px;
+     margin-left: 10px;
+     
+    
+       
+    }
+    div a{
+    
+    }
+    div a:hover{
+        text-decoration: none;
+        color: white;
+    }
+    .form-element{
+        border: 0px none;
+      
+        margin-left: 3px;
+        margin-left: 6px;
+        background-color: rgba(255, 255, 255, 0.741);
+    
+    }
+    .form-element:hover{
+    border-radius: 6px;
+    border: 1px solid blue;
+    background-color: #fff;
+    }
+    .form-element:active{
+    background-color: #fff;
+    }
+    .labels{
+        color:#FF5500;
+        margin-left: 6px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    }
+    h3{
+        
+        font-weight: 800;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: #191970;
+        font-size: 15pt;
+    }
+    .header-section{
+        margin-top: 80px;
+    }
+    
+    .submit{
+    width: 50%;
+    margin-top: 6px;
+    margin-left: 15px;
+    }
+}

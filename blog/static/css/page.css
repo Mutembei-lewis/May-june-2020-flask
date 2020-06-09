@@ -3,8 +3,13 @@
     padding: 0px;
     list-style: none;
     text-decoration: none;
+    font-size: 18px;
 
 }
+
+        /* end of input section*/
+@media screen and (min-width:1201px){
+    /* css for the side bar*/
 .sidebar{
     position: fixed;
     top: 0;
@@ -215,8 +220,6 @@ section{
   
     margin-left: 3px;
     margin-left: 6px;
-    
-    
 
 }
 .form-element:hover{
@@ -224,4 +227,1291 @@ border-radius: 6px;
 border: 1px solid blue;
 background-color: #fff;
 }
-        /* end of input section*/
+
+}
+@media screen and (min-width:969px) and (max-width:1200px){
+  body{
+font-size: 14px;
+  }
+  
+  
+  
+  
+    /* css for the side bar*/
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #042331;
+    transition: all .4s ease;
+    z-index: 10;
+}
+.sidebar header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #063146;
+    user-select: none;
+}
+.sidebar ul a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom:1px solid black;
+    transition: all .4s ease;
+}
+ul li:hover a{
+    padding-left: 50px;
+}
+.sidebar ul a i{
+    margin-right:16px ;
+}
+#check{
+    display: none;
+}
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background: #042332;
+    border-radius: 3px;
+}
+label #btn {
+
+    left: 40px;
+    top: 25px;
+    font-size: 40px;
+    color: white;
+    padding: 6px 12px;
+    transition:  all .5s ease;
+}
+
+label #cancel{
+    z-index: 1111;
+    left:-195px ;
+    top: 17px;
+    color:#80c2e4 ;
+    font-size: 50px;
+    padding:4px 9px;
+    transition: all .5s ease;
+}
+#check:checked  ~ .sidebar{
+    left: 0;
+}
+#check:checked  ~ label #btn{
+    left: 250px;
+    opacity:0 ;
+    pointer-events: none;
+}
+#check:checked  ~ label #cancel{
+    left: 195px;
+  
+}
+/*end of side navigation css*/
+section{
+    background-color: rgb(226, 213, 213);
+}
+.user_intro{
+    height: 60vh;
+   
+
+}
+#userhomediv{
+    font-size: 22pt;
+    color: white;
+    font-weight: 900;
+    letter-spacing: 2px;
+    padding: 40px;
+    
+    
+}
+
+.rowbox{
+    padding: 20px;
+    
+}
+#user_description_card{
+    height: auto;
+    border-radius: 8px;
+    background-color: white;
+    padding: 15px;
+    
+}
+#user_form_card{
+    position: relative;
+    height: auto;
+    border-radius: 6px;
+    background-color: white;
+    padding: 15px;
+}
+#newavatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 0px solid white;
+    
+}
+
+        /* button*/
+        .followlinkcss{
+            width: 150px;
+            height: 30px;
+            border: 1px solid rgb(0, 255, 51);
+            border-radius: 20px;
+            margin: 10px auto;
+            background-color: rgb(255, 0, 85);
+          }
+        .signup{
+            width: 80px;
+            height: 40px;
+            border: 1px solid coral;
+            color: aqua;
+            border-radius: 24px;
+            background: transparent;
+    
+          }
+          .signup:hover{
+            background: white;
+            color: blue;
+          }
+          .icons{
+            color: white;
+          }
+        /*end of buttons css */
+        /*  input section css*/
+        .labels{
+            
+        width: 100%;
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: #042331;
+        }
+        .biolabel{
+            width: 40%;
+            font-size: 18px;
+            color: #042331;
+            margin-top: 0px;
+            padding-top: 0px;
+
+        }
+        .biocontainer{
+            width: 100%;
+            height: 120px;
+            margin: 0px;
+            padding: 0px;
+        }
+        .bio{
+            width: 90%;
+            height: 80px;
+            margin-left: 15px;
+            
+        }
+        .updateform{
+            border: 1px solid grey;
+            border-radius: 8px;
+            margin-bottom:12px;
+            color: #80c2e4;
+        }
+        .form-element:active{
+            background-color: #fff;
+            }
+            .submit_sec{
+                color: black;
+                width: 50%;
+                margin: auto;
+            }
+
+
+
+.formcontainer{
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    width: 48%;
+    height: 80px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+   
+      
+   }
+.form-element{
+    border:1.2px solid #f0f0f0;
+  width: 160px;
+    margin-left: 0px;
+    
+  
+}
+.form-element:hover{
+border-radius: 6px;
+border: 1px solid blue;
+background-color: #fff;
+}
+/* bio section*/
+.mybio{
+    font-size: 16px;
+    font-weight: 300;
+    color: rgb(71, 68, 68);
+
+}
+/*end of bio section*/
+
+}
+@media screen and (min-width:769px) and (max-width:968px){
+ 
+  
+  
+  
+  
+  
+    /* css for the side bar*/
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #042331;
+    transition: all .4s ease;
+    z-index: 10;
+}
+.sidebar header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #063146;
+    user-select: none;
+}
+.sidebar ul a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom:1px solid black;
+    transition: all .4s ease;
+}
+ul li:hover a{
+    padding-left: 50px;
+}
+.sidebar ul a i{
+    margin-right:16px ;
+}
+#check{
+    display: none;
+}
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background: #042332;
+    border-radius: 3px;
+}
+label #btn {
+
+    left: 40px;
+    top: 25px;
+    font-size: 40px;
+    color: white;
+    padding: 6px 12px;
+    transition:  all .5s ease;
+}
+
+label #cancel{
+    z-index: 1111;
+    left:-195px ;
+    top: 17px;
+    color:#80c2e4 ;
+    font-size: 50px;
+    padding:4px 9px;
+    transition: all .5s ease;
+}
+#check:checked  ~ .sidebar{
+    left: 0;
+}
+#check:checked  ~ label #btn{
+    left: 250px;
+    opacity:0 ;
+    pointer-events: none;
+}
+#check:checked  ~ label #cancel{
+    left: 195px;
+  
+}
+/*end of side navigation css*/
+section{
+    background-color: rgb(226, 213, 213);
+}
+.user_intro{
+    height: 50vh;
+   
+
+}
+#userhomediv{
+    font-size:1.5rem;
+    color: white;
+    font-weight: 800;
+    letter-spacing: 2px;
+    padding: 40px;
+    
+    
+}
+
+.rowbox{
+    padding: 20px;
+    
+}
+#user_description_card{
+    height: auto;
+    border-radius: 8px;
+    background-color: white;
+    padding: 15px;
+    
+}
+#user_description_card h6{
+font-size: 0.8rem;
+color:darkcyan;
+}
+#user_form_card{
+    position: relative;
+    height: auto;
+    border-radius: 6px;
+    background-color: white;
+    padding: 15px;
+}
+#newavatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 0px solid white;
+    
+}
+
+        /* button*/
+        .followlinkcss{
+            width: 150px;
+            height: 30px;
+            border: 1px solid rgb(0, 255, 51);
+            border-radius: 20px;
+            margin: 10px auto;
+            background-color: rgb(255, 0, 85);
+          }
+        .signup{
+            width: 80px;
+            height: 40px;
+            border: 1px solid coral;
+            color: aqua;
+            border-radius: 24px;
+            background: transparent;
+    
+          }
+          .signup:hover{
+            background: white;
+            color: blue;
+          }
+          .icons{
+            color: white;
+          }
+        /*end of buttons css */
+        /*  input section css*/
+        .labels{
+            
+        width: 100%;
+        font-weight: 700;
+        font-size: 0.7rem;
+        color: #042331;
+        }
+        .biolabel{
+            width: 40%;
+            font-size: 18px;
+            color: #042331;
+            margin-top: 0px;
+            padding-top: 0px;
+
+        }
+        .biocontainer{
+            width: 100%;
+            height: 120px;
+            margin: 0px;
+            padding: 0px;
+        }
+        .bio{
+            width: 90%;
+            height: 80px;
+            margin-left: 15px;
+            
+        }
+        .updateform{
+            border: 1px solid grey;
+            border-radius: 8px;
+            margin-bottom:12px;
+            color: #80c2e4;
+        }
+        .form-element:active{
+            background-color: #fff;
+            }
+            .submit_sec{
+                color: black;
+                width: 50%;
+                margin: auto;
+            }
+
+
+
+.formcontainer{
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    width: 48%;
+    height: 80px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+   
+      
+   }
+.form-element{
+    border:1.2px solid #f0f0f0;
+  width: 120px;
+    margin-left: 0px;
+    
+  
+}
+.form-element:hover{
+border-radius: 6px;
+border: 1px solid blue;
+background-color: #fff;
+}
+/* bio section*/
+.mybio{
+    font-size: 16px;
+    font-weight: 300;
+    color: rgb(71, 68, 68);
+
+}
+/*end of bio section*/
+/* main page heading css*/
+.page-title{
+    font-size:1.8rem;
+    font-weight: 900;
+    
+}
+/* end of main page heading*/
+
+}
+
+@media screen and (min-width:421px) and (max-width:768px){
+
+
+  
+    /* css for the side bar*/
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background: #042331;
+    transition: all .4s ease;
+    z-index: 10;
+}
+.sidebar header{
+    font-size: 19px;
+    font-weight: 700;
+    
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #063146;
+    user-select: none;
+}
+.sidebar ul a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 65px;
+    font-size: 16px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom:1px solid black;
+    transition: all .4s ease;
+}
+ul li:hover a{
+    padding-left: 50px;
+}
+.sidebar ul a i{
+    margin-right:16px ;
+}
+#check{
+    display: none;
+}
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background: #042332;
+    border-radius: 3px;
+}
+label #btn {
+
+    left: 40px;
+    top: 25px;
+    font-size: 40px;
+    color: white;
+    padding: 6px 12px;
+    transition:  all .5s ease;
+}
+
+label #cancel{
+    z-index: 1111;
+    left:-160px ;
+    top: 17px;
+    color:#80c2e4 ;
+    font-size: 40px;
+    padding:4px 9px;
+    transition: all .5s ease;
+}
+#check:checked  ~ .sidebar{
+    left: 0;
+}
+#check:checked  ~ label #btn{
+    left: 200px;
+    opacity:0 ;
+    pointer-events: none;
+}
+#check:checked  ~ label #cancel{
+    left: 160px;
+  
+}
+/*end of side navigation css*/
+section{
+    background-color: rgb(226, 213, 213);
+}
+.user_intro{
+    height: 40vh;
+   
+
+}
+#userhomediv{
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 20px;
+    
+    
+}
+
+.rowbox{
+    padding: 0px;
+    
+}
+#user_description_card{
+    height: auto;
+    
+    background-color: white;
+    padding: 20px 10px 10px 30px;
+    
+}
+#user_description_card h6{
+font-size: 0.8rem;
+color:darkcyan;
+}
+#user_form_card{
+    position: relative;
+    height: auto;
+    border-radius: 6px;
+    background-color: white;
+    padding: 15px 20px 0px 60px;
+}
+#newavatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 0px solid white;
+    
+}
+
+        /* button*/
+        .followlinkcss{
+            width: 250px;
+            height: 40px;
+            border: 0px solid rgb(0, 255, 51);
+            border-radius: 8px;
+            margin: 10px auto;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: rgb(255, 0, 85);
+          }
+          .followlinkcss a{
+              color: white;
+          }
+          .followlinkcss a:hover{
+            color: white;
+            text-decoration: none;
+        }
+        .signup{
+            width: 80px;
+            height: 40px;
+            border: 1px solid coral;
+            color: aqua;
+            border-radius: 24px;
+            background: transparent;
+    
+          }
+          .signup:hover{
+            background: white;
+            color: blue;
+          }
+          .icons{
+            color: white;
+            font-size: 30px;
+            margin-right: 20px;
+            margin-top: 3px;
+          }
+        /*end of buttons css */
+        /*  input section css*/
+        .labels{
+            
+        width: 100%;
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: #042331;
+        }
+        .biolabel{
+            width: 40%;
+            font-size: 18px;
+            color: #042331;
+            margin-top: 0px;
+            padding-top: 0px;
+            font-weight: 700;
+
+        }
+        .biocontainer{
+            width: 100%;
+            height: 160px;
+            margin: 0px;
+            padding: 0px;
+        }
+        .bio{
+            width: 90%;
+            height: 120px;
+            margin-left: 15px;
+            
+        }
+        .updateform{
+            border: 0px solid grey;
+         
+            margin-bottom:5px;
+            color: #80c2e4;
+        }
+        .form-element:active{
+            background-color: #fff;
+            }
+            .submit_sec{
+                color: black;
+                width: 60%;
+                margin: auto;
+                height: 40px;
+            }
+
+
+
+.formcontainer{
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    width: 48%;
+    height: 80px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+   
+      
+   }
+.form-element{
+    border:1.2px solid #f0f0f0;
+  width: 200px;
+    margin-left: 0px;
+    
+  
+}
+.form-element:hover{
+border-radius: 6px;
+border: 1px solid white;
+background-color: #fff;
+}
+/* bio section*/
+.mybio{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(15, 2, 2);
+
+}
+/*end of bio section*/
+/* main page heading css*/
+.page-title{
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+/* end of main page css*/
+
+}
+@media screen and (min-width:401px) and (max-width:420px){
+
+
+  
+    /* css for the side bar*/
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: -150px;
+    width: 150px;
+    height: 100%;
+    background: #042331;
+    transition: all .4s ease;
+    z-index: 10;
+}
+.sidebar header{
+    font-size: 19px;
+    font-weight: 700;
+    
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #063146;
+    user-select: none;
+}
+.sidebar ul a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 16px;
+    color: white;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom:1px solid black;
+    transition: all .4s ease;
+}
+ul li:hover a{
+    padding-left: 50px;
+}
+.sidebar ul a i{
+    margin-right:16px ;
+}
+#check{
+    display: none;
+}
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background: #042332;
+    border-radius: 3px;
+}
+label #btn {
+
+    left: 40px;
+    top: 25px;
+    font-size: 40px;
+    color: white;
+    padding: 6px 12px;
+    transition:  all .5s ease;
+}
+
+label #cancel{
+    z-index: 1111;
+    left:-130px ;
+    top: 17px;
+    color:#80c2e4 ;
+    font-size: 40px;
+    padding:4px 9px;
+    transition: all .5s ease;
+}
+#check:checked  ~ .sidebar{
+    left: 0;
+}
+#check:checked  ~ label #btn{
+    left: 150px;
+    opacity:0 ;
+    pointer-events: none;
+}
+#check:checked  ~ label #cancel{
+    left: 130px;
+  
+}
+/*end of side navigation css*/
+section{
+    background-color: rgb(226, 213, 213);
+}
+.user_intro{
+    height: 40vh;
+   
+
+}
+#userhomediv{
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 20px;
+    
+    
+}
+
+.rowbox{
+    padding: 0px;
+    
+}
+#user_description_card{
+    height: auto;
+    
+    background-color: white;
+    padding: 20px 10px 10px 30px;
+    
+}
+#user_description_card h6{
+font-size: 0.8rem;
+color:darkcyan;
+}
+#user_form_card{
+    position: relative;
+    height: auto;
+    border-radius: 6px;
+    background-color: white;
+    padding: 15px 20px 0px 60px;
+}
+#newavatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 0px solid white;
+    
+}
+
+        /* button*/
+        .followlinkcss{
+            width: 250px;
+            height: 40px;
+            border: 0px solid rgb(0, 255, 51);
+            border-radius: 8px;
+            margin: 10px auto;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: rgb(255, 0, 85);
+          }
+          .followlinkcss a{
+              color: white;
+          }
+          .followlinkcss a:hover{
+            color: white;
+            text-decoration: none;
+        }
+        .signup{
+            width: 80px;
+            height: 40px;
+            border: 1px solid coral;
+            color: aqua;
+            border-radius: 24px;
+            background: transparent;
+    
+          }
+          .signup:hover{
+            background: white;
+            color: blue;
+          }
+          .icons{
+            color: white;
+            font-size: 30px;
+            margin-right: 20px;
+            margin-top: 3px;
+          }
+        /*end of buttons css */
+        /*  input section css*/
+        .labels{
+            
+        width: 100%;
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: #042331;
+        }
+        .biolabel{
+            width: 40%;
+            font-size: 18px;
+            color: #042331;
+            margin-top: 0px;
+            padding-top: 0px;
+            font-weight: 700;
+
+        }
+        .biocontainer{
+            width: 100%;
+            height: 160px;
+            margin: 0px;
+            padding: 0px;
+        }
+        .bio{
+            width: 90%;
+            height: 120px;
+            margin-left: 15px;
+            
+        }
+        .updateform{
+            border: 0px solid grey;
+         
+            margin-bottom:5px;
+            color: #80c2e4;
+        }
+        .form-element:active{
+            background-color: #fff;
+            }
+            .submit_sec{
+                color: black;
+                width: 60%;
+                margin: auto;
+                height: 40px;
+                font-size: 16px;
+            }
+
+
+
+.formcontainer{
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    width: 48%;
+    height: 60px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+   
+      
+   }
+.form-element{
+    border:1.2px solid #f0f0f0;
+  width: 200px;
+    margin-left: 0px;
+    
+  
+}
+.form-element:hover{
+border-radius: 6px;
+border: 1px solid white;
+background-color: #fff;
+}
+/* bio section*/
+.mybio{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(15, 2, 2);
+
+}
+/*end of bio section*/
+/* main page heading css*/
+.page-title{
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+/* end of main page css*/
+}
+@media screen and (min-width:321px) and (max-width:400px){
+
+
+    /* css for the side bar*/
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: -150px;
+    width: 150px;
+    height: 100%;
+    background: #042331;
+    transition: all .4s ease;
+    z-index: 10;
+}
+.sidebar header{
+    font-size: 19px;
+    font-weight: 700;
+    
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #063146;
+    user-select: none;
+}
+.sidebar ul a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 16px;
+    color: white;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom:1px solid black;
+    transition: all .4s ease;
+}
+ul li:hover a{
+    padding-left: 50px;
+}
+.sidebar ul a i{
+    margin-right:16px ;
+}
+#check{
+    display: none;
+}
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background: #042332;
+    border-radius: 3px;
+}
+label #btn {
+
+    left: 40px;
+    top: 25px;
+    font-size: 40px;
+    color: white;
+    padding: 6px 12px;
+    transition:  all .5s ease;
+}
+
+label #cancel{
+    z-index: 1111;
+    left:-130px ;
+    top: 17px;
+    color:#80c2e4 ;
+    font-size: 40px;
+    padding:4px 9px;
+    transition: all .5s ease;
+}
+#check:checked  ~ .sidebar{
+    left: 0;
+}
+#check:checked  ~ label #btn{
+    left: 150px;
+    opacity:0 ;
+    pointer-events: none;
+}
+#check:checked  ~ label #cancel{
+    left: 130px;
+  
+}
+/*end of side navigation css*/
+section{
+    background-color: rgb(226, 213, 213);
+}
+.user_intro{
+    height: 40vh;
+   
+
+}
+#userhomediv{
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 20px;
+    
+    
+}
+
+.rowbox{
+    padding: 0px;
+    
+}
+#user_description_card{
+    height: auto;
+    
+    background-color: white;
+    padding: 20px 10px 10px 30px;
+    
+}
+#user_description_card h6{
+font-size: 0.8rem;
+color:darkcyan;
+}
+#user_form_card{
+    position: relative;
+    height: auto;
+    border-radius: 6px;
+    background-color: white;
+    padding: 15px 20px 0px 20px;
+}
+#newavatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 0px solid white;
+    
+}
+
+        /* button*/
+        .followlinkcss{
+            width: 250px;
+            height: 40px;
+            border: 0px solid rgb(0, 255, 51);
+            border-radius: 8px;
+            margin: 10px auto;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: rgb(255, 0, 85);
+          }
+          .followlinkcss a{
+              color: white;
+          }
+          .followlinkcss a:hover{
+            color: white;
+            text-decoration: none;
+        }
+        .signup{
+            width: 80px;
+            height: 40px;
+            border: 1px solid coral;
+            color: aqua;
+            border-radius: 24px;
+            background: transparent;
+    
+          }
+          .signup:hover{
+            background: white;
+            color: blue;
+          }
+          .icons{
+            color: white;
+            font-size: 30px;
+            margin-right: 20px;
+            margin-top: 3px;
+          }
+        /*end of buttons css */
+        /*  input section css*/
+        .labels{
+            
+        width: 100%;
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: #042331;
+        }
+        .biolabel{
+            width: 40%;
+            font-size: 18px;
+            color: #042331;
+            margin-top: 0px;
+            padding-top: 0px;
+            font-weight: 700;
+
+        }
+        .biocontainer{
+            width: 100%;
+            height: 160px;
+            margin: 0px;
+            padding: 0px;
+        }
+        .bio{
+            width: 90%;
+            height: 120px;
+            margin-left: 15px;
+            
+        }
+        .updateform{
+            border: 0px solid grey;
+         
+            margin-bottom:5px;
+            color: #80c2e4;
+        }
+        .form-element:active{
+            background-color: #fff;
+            }
+            .submit_sec{
+                color: black;
+                width: 60%;
+                margin: auto;
+                height: 40px;
+                font-size: 16px;
+            }
+
+
+
+.formcontainer{
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    width: 48%;
+    height: 60px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+   
+      
+   }
+.form-element{
+    border:1.2px solid #f0f0f0;
+  width: 200px;
+    margin-left: 0px;
+    
+  
+}
+.form-element:hover{
+border-radius: 6px;
+border: 1px solid white;
+background-color: #fff;
+}
+/* bio section*/
+.mybio{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(15, 2, 2);
+
+}
+/*end of bio section*/
+/* main page heading css*/
+.page-title{
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+/* end of main page css*/
+}

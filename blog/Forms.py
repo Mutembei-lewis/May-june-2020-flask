@@ -62,7 +62,7 @@ class UpdateBioForm(FlaskForm):
 class UpdatePasswordForm(FlaskForm):
     password = PasswordField('Password:', validators=[DataRequired(),Length(min=6, max=12)])
     password2 = PasswordField(
-        'Confirm Password:', validators=[DataRequired(), EqualTo('password',message='The passwords must match')])
+        'Confirm-Password:', validators=[DataRequired(), EqualTo('password',message='The passwords must match')])
     submit = SubmitField('Update password')
 
 

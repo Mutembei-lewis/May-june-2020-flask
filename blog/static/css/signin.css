@@ -1,0 +1,332 @@
+
+@media screen and (min-width: 969px) and (max-width:1200px){
+   
+    
+.carrier{
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.891);
+    width: 40vw;
+    height: 60vh;
+   padding: 20px;
+    margin: 10% 10% 5% 30%;
+}
+.input-div{
+   width: 80%;
+    border: 0px none;
+}
+.labels{
+    color:#FF5500;
+    margin-left: 6px;
+font-weight: 500;
+font-size: 1.3rem;
+}
+.content-div{
+    margin: 8px;
+    padding: 5px;
+}
+.submit{
+    width: 50%;
+    margin: 8px;
+    padding: 5px;
+}
+.hyperlink{
+
+}
+.hyperlink:hover{
+    color: #FF5500;
+    text-decoration: none;
+}
+h3{
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #191970;
+    font-size:3rem;
+
+}
+
+}
+@media screen and (min-width: 769px) and (max-width:968px){
+    .carrier{
+        border-radius: 16px;
+        background-color: rgba(255, 255, 255, 0.891);
+        width: 40vw;
+        height: 60vh;
+       padding: 20px;
+        margin: 10% 10% 5% 30%;
+    }
+    .input-div{
+       width: 80%;
+        border: 0px none;
+    }
+    .labels{
+        color:#FF5500;
+        margin-left: 6px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    }
+    .content-div{
+        margin: 8px;
+        padding: 5px;
+    }
+    .submit{
+        width: 50%;
+        margin: 8px;
+        padding: 5px;
+    }
+    .hyperlink{
+    
+    }
+    .hyperlink:hover{
+        color: #FF5500;
+        text-decoration: none;
+    }
+    h3{
+        font-weight: 900;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: #191970;
+        font-size:3rem;
+    
+    }
+    
+}
+@media screen and (min-width: 469px) and (max-width:768px){
+    .carrier{
+        border-radius: 16px;
+        background-color: rgba(255, 255, 255, 0.891);
+        width: 60vw;
+        height: 60vh;
+       padding: 20px;
+        margin: 15% 5% 5% 15%;
+    }
+    .input-div{
+       width: 80%;
+        border: 0px none;
+    }
+    .labels{
+        color:#FF5500;
+        margin-left: 6px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    }
+    .content-div{
+        margin: 8px;
+        padding: 5px;
+    }
+    .submit{
+        width: 50%;
+        margin: 8px;
+        padding: 5px;
+    }
+    .hyperlink{
+    display: block;
+    }
+    .hyperlink:hover{
+        color: #FF5500;
+        text-decoration: none;
+    }
+    h3{
+        font-weight: 900;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: #191970;
+        font-size:3rem;
+    
+    }
+    
+}
+@media screen and (min-width:421px) and (max-width:468px){
+    .carrier{
+     
+        background-color: rgba(255, 255, 255, 0.891);
+        width: 100vw;
+        height: auto;
+       padding: 5px;
+        margin: 18% 0% 0% 0%;
+    }
+    .input-div{
+       width: 80%;
+        border: 0px none;
+    }
+    .labels{
+        color:#FF5500;
+        margin-left: 6px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    }
+    .content-div{
+        margin: 2px;
+        padding: 5px;
+    }
+    .submit{
+        width: 50%;
+        margin: 8px;
+        padding: 5px;
+    }
+    .hyperlink{
+    display: block;
+    }
+    .hyperlink:hover{
+        color: #FF5500;
+        text-decoration: none;
+    }
+    h3{
+        font-weight: 600;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: #191970;
+        font-size:2rem;
+    
+    }
+
+}
+@media screen and (min-width:401px) and (max-width:420px){
+    .carrier{
+     
+        background-color: rgba(255, 255, 255, 0.891);
+        width: 900vw;
+        height: auto;
+       padding: 10px;
+        margin: 18% 0% 0% 0%;
+    }
+    .input-div{
+       width: 80%;
+        border: 0px none;
+    }
+    .labels{
+        color:#FF5500;
+        margin-left: 6px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    }
+    .content-div{
+        margin: 2px;
+        padding: 5px;
+    }
+    .submit{
+        width: 50%;
+        margin: 8px;
+        padding: 5px;
+    }
+    .hyperlink{
+    display: block;
+    }
+    .hyperlink:hover{
+        color: #FF5500;
+        text-decoration: none;
+    }
+    h3{
+        font-weight: 900;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: #070729;
+        font-size:1.2rem;
+    
+    }
+
+}
+@media screen and (min-width:321px) and (max-width:400px){
+    .carrier{
+     
+        background-color: rgba(255, 255, 255, 0.891);
+        width: 900vw;
+        height: auto;
+       padding: 10px;
+        margin: 18% 0% 0% 0%;
+    }
+    .input-div{
+       width: 80%;
+        border: 0px none;
+    }
+    .labels{
+        color:#FF5500;
+        margin-left: 6px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    }
+    .content-div{
+        margin: 2px;
+        padding: 5px;
+    }
+    .submit{
+        width: 50%;
+        margin: 8px;
+        padding: 5px;
+    }
+    .hyperlink{
+    display: block;
+    }
+    .hyperlink:hover{
+        color: #FF5500;
+        text-decoration: none;
+    }
+    h3{
+        font-weight: 900;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: #070729;
+        font-size:1.2rem;
+    
+    }
+
+}
+@media screen and ( min-width:300px) and (max-width:320px){
+
+}
+
+
+@media screen and (min-width:1200px)
+{
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+         background: linear-gradient(to bottom, rgba(0, 229, 255, 0.462),rgba(8, 87, 184, 0.462),rgba(0, 157, 255, 0.51)), url('static/images/leaf.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    }
+    
+.carrier{
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.891);
+    width: 40vw;
+    height: 60vh;
+   padding: 20px;
+    margin: 10% 10% 5% 30%;
+}
+.input-div{
+   width: 80%;
+    border: 0px none;
+}
+.labels{
+    color:#FF5500;
+    margin-left: 6px;
+font-weight: 500;
+font-size: 1.3rem;
+}
+.content-div{
+    margin: 8px;
+    padding: 5px;
+}
+.submit{
+    width: 50%;
+    margin: 8px;
+    padding: 5px;
+}
+.hyperlink{
+
+}
+.hyperlink:hover{
+    color: #FF5500;
+    text-decoration: none;
+}
+h3{
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #191970;
+    font-size:3rem;
+
+}
+
+}
+
+
+
+

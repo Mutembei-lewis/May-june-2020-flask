@@ -32,13 +32,7 @@
       font-weight: 600;
 
     }
-    .about_image_div{
-      position: relative;
-      width: 100%;
-      height: 250px;
-      left: 10%;
-      
-    }
+  
     /* about photo*/
     #about_photo{
       margin: auto;
@@ -1364,12 +1358,14 @@ box-shadow: 7px 15px 30px 15px rgba(163, 147, 145, 0.86);
           position: relative;
           width: 100%;
           height: 250px;
-          left: 10%;
+          left: 5%;
           
         }
         /* about photo*/
         #about_photo{
-          margin: auto;
+          position: absolute;
+          width: 100%;
+          height: 100%;
         }
         /*end of about css*/
         .most-recent{
@@ -1539,12 +1535,7 @@ box-shadow: 7px 15px 30px 15px rgba(163, 147, 145, 0.86);
         font-weight: 600;
         text-align: center;
       }
-      .about_image_div{
-        position: relative;
-        width: 100%;
-        height: 250px;
-        
-      }
+      
       
       .about_section{
         margin: 20px;

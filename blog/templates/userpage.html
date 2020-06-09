@@ -46,10 +46,10 @@
             background-repeat: no repeat;
             background-position: center center;
             background-attachment: fixed;
-            height: 70vh;" >
+            " >
 
            <div class="text-center " id="userhomediv">
-            <h1>  USER PAGE  </h1>
+            <h1 class="page-title">  USER PAGE  </h1>
             Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. 
             Fugit corporis <br> eum ea officia,
       
@@ -63,27 +63,29 @@
         <section>
             <div class="row rowbox ">
                 <div class="col-md-4 mx-auto text-center col-lg-4 d-flex-sm  " id="user_description_card">
-                    <img  src="/static/images/profiles/{{user.profile_picture}}" class="img-fluid" src="/static/images/home/anchor.jpg" alt="" class="img-fluid  " id="newavatar"> <br>
+                    <img  src="/static/images/profiles/{{user.profile_picture}}" class="img-fluid" src="/static/images/home/anchor.jpg" alt="profile picture" id="newavatar"> <br>
                    
                         <h6> {{user.firstname}} {{user.lastname}}</h6>
-                        <h6> {{user.email}}</h6> 
+                        
                        
                         <button class="btn text-left btn-outline-info">Bio</button> <br>
 
-                    <p class="text-left mt-4">
+                    <p class="text-left mt-lg-4 mt-md-4 mt-sm-3 mybio">
                         {{user.bio}}
 
                         
                     </p>
-                 <button type="button" class="btn btn-outline-info btn-sm"> update profile</button> 
+              
                       <button class="signup"> + follow  </button> <br>
-            <div class="followlinkcss"> <i class="fab fa-github icons"></i></a> </div >  <div class="followlinkcss"> <a href=""> <i class="fab fa-twitter icons"></i></a></div> <div class="followlinkcss"> <a href=""> <i class="fab fa-instagram icons"></i> </a> </div>  
+            <div class="followlinkcss"> <a href=""> <i class="fab fa-github icons"></i>  github </a></div >
+                  <div class="followlinkcss"> <a href=""> <i class="fab fa-twitter icons "></i> twitter</a></div>
+                   <div class="followlinkcss"> <a href=""> <i class="fab fa-instagram icons"></i> Instagram </a> </div>  
                  <br>
                 </div>
-                <div class="col-md-7 mx-auto col-lg-7 col-sm-10  " id="user_form_card">
+                <div class="col-md-7 mx-lg-auto mx-md-auto col-lg-7 col-sm-12  " id="user_form_card">
                     
                     <form action="account" method="post" class="updateform" enctype="multipart/form-data">
-                        
+                        <h5 class="text-center text-dark"> Update Profile</h5>
                     {{ form.hidden_tag() }}
                     <div class="formcontainer d-lg-inlineflex d-md-inline-flex">
 
@@ -126,7 +128,7 @@
                     </div>
                     <div class="biocontainer ">
                        <div>  {{ form.bio.label(class='biolabel ') }} </div>
-                        {{ form.bio(class='form-element bio ') }}
+                        {{ form.bio(class=' bio ') }}
                     </div>
                     <div class="form-group submit_sec text-center">
                         {{form.submit(class="submit_sec btn btn-block btn-outline-info")}} 
@@ -138,15 +140,15 @@
                 </form>
                 <form action="updatepassword" method="POST" class="updateform">
                     {{form.hidden_tag()}}
-                    <div class="formcontainer d-lg-inlinflex d-md-inline-flex">
+                    <div class="formcontainer d-lg-inline-flex d-md-inline-flex">
                         {{ passform.password.label(class='labels') }}
                         {{ passform.password(class='form-element form-control-sm') }}
                     </div>
-                    <div class="formcontainer d-lg-inlinflex d-md-inline-flex">
+                    <div class="formcontainer d-lg-inline-flex d-md-inline-flex">
                         {{ passform.password2.label(class='labels') }}
                         {{ passform.password2(class='form-element form-control-sm') }}
                     </div>
-                    <div class="form-group submit_sec text-center">
+                    <div class="form-group submit_sec text-center ">
                         {{passform.submit(class="submit_sec btn btn-block btn-outline-info")}} 
                     </div>
                 </form>

@@ -2,80 +2,20 @@
 {% block head %}
 {{super()}}
 <title> Log in</title>
+<link rel="stylesheet" href="{{url_for('static', filename = 'css/signin.css')}}">
 <style>
     body{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-         background: linear-gradient(to bottom, rgba(0, 229, 255, 0.462),rgba(8, 87, 184, 0.462),rgba(0, 157, 255, 0.51)), url('static/images/leaf.jpg');
+         background: linear-gradient(to bottom, rgba(0, 229, 255, 0.462),rgba(8, 87, 184, 0.462),rgba(0, 157, 255, 0.51)), url('/static/images/leaf.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     }
-   
-
-    @media screen and (min-width: 900px)
-    {
-        
-    .carrier{
-        border-radius: 16px;
-        background-color: rgba(255, 255, 255, 0.891);
-        width: 40vw;
-        height: 60vh;
-       padding: 20px;
-        margin: 10% 10% 5% 30%;
-    }
-    .input-div{
-       width: 80%;
-        border: 0px none;
-    }
-    .labels{
-        color:#FF5500;
-        margin-left: 6px;
-    font-weight: 500;
-    font-size: 1.3rem;
-    }
-    .content-div{
-        margin: 8px;
-        padding: 5px;
-    }
-    .submit{
-        width: 50%;
-        margin: 8px;
-        padding: 5px;
-    }
-    .hyperlink{
-    
-    }
-    .hyperlink:hover{
-        color: #FF5500;
-        text-decoration: none;
-    }
-    h3{
-        font-weight: 900;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        color: #191970;
-        font-size:3rem;
-
-    }
-   
-}
-@media screen and (min-width:468px) and (max-width: 900px){
-
-    .carrier{
-        border-radius: 8px;
-        background-color: rgba(255, 255, 255, 0.891);
-        width: 40vw;
-        height: 60vh;
-    
-        
-    }
-}
-
-
-
 </style>
+    
 {% endblock  %}
 {% block  content %}
 
@@ -98,7 +38,7 @@
     </div>
     
 <div class="content-div">
-    <small>  Don't have an account? <a href="{{url_for('signup')}}" class="hyperlink"><b>Sign up</b></a><a href='{{url_for('reset_request')}}' class="ml-3 hyperlink">  <b> Forgot password</b>  </a></small>
+    <small>  Don't have an account? <a href="{{url_for('signup')}}" class="hyperlink"><b>Sign up</b></a><a href='{{url_for("reset_request")}}' class=" hyperlink">  <b> Forgot password</b>  </a></small>
 </div>  
     
 </form>
