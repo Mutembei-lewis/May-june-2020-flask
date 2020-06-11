@@ -165,7 +165,27 @@
         color: white;
       }
       /* end of font styling*/
-          
+      .comment-section{
+        height: auto;
+        margin: 20px;
+        padding: 5px;
+
+      }
+      .comment-image{
+        width: 60px;
+        height: 60px;
+        border-radius:50%;
+        margin: 6px;
+      }
+      .comment-body{
+        position: relative;
+        left: 10%;
+        width: 50vw;
+        height: 60px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        color:black;
+      }
   }
  
 </style>
@@ -199,6 +219,21 @@
       <button class="btn btn-sm btn-outline-info" data-toggle="modal" data-target="#exampleModal">  delete post</button>  
         {%else%}
         {%endif%}  
+        <div class="comment-section">
+          <h2> Comments</h2>
+          {%for comment in comments%}
+          <div class="">
+            <img src="/static/images/profiles/profile1.jpg" class="comment-image" alt=""> <span>  posted by {{comment.name}}</span>  
+            <div class="comment-body">
+               <p>{{comment.message}}</p> 
+                   <span> <a href=""> reply <i class="fas fa-reply"></i></a></span>
+                  </div>
+          </div>
+          {%endfor%}
+          
+        </div>
+
+        
         <div class="commentsection">
           <h5 class=" text-center"> <b> Leave a comment</b> </h5>
           <form action="{{url_for('add_comment',post_id = post.id)}}" method ='POST'>
@@ -207,7 +242,7 @@
            <br> Email * <br>
             <input type="email" name='email' class="commentform" placeholder="your email"> <br>
             <br> Message <br>
-            <textarea name="message" id="" cols="50" rows="5" class="text_area"></textarea>
+            <textarea name="message" id="" cols="50" rows="5" class="text_area"></textarea> <br>
               <button type="submit" class=" btn-info btn"> post comment</button>
           </form>
 

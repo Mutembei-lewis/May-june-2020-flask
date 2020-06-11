@@ -8,10 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Bentham&family=Lora:ital@1&family=Montaga&family=PT+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Alegreya|Alegreya+Sans|Arvo|Frank+Ruhl+Libre|Lato|Open+Sans|Roboto+Slab|Work+Sans&display=swap" rel="stylesheet">
-   
+  
    <!-- font awesome cdn -->
     <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
     <!-- <script src="https://kit.fontawesome.com/57c80489f0.js" crossorigin="anonymous"></script> -->
@@ -75,25 +76,32 @@
 </nav>
  </div>
 
+ 
 
  
 
- {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-              {% for category, message in messages %}
-               
-                <div class="alert alert-info text-danger text-center alert-dismissible fade show alert-{{ category }}" role="alert">
-                  <strong> {{message}}</strong>
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                 
-                </div>
 
-              {% endfor %}
-            {% endif %}
-          {% endwith %}
           {% block content %}
+
+<div class="feedback">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+     
+      <div class="alert alert-info text-danger text-center alert-dismissible fade show alert-{{ category }}" role="alert">
+        <strong> {{message}}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+       
+      </div>
+
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+
+</div>
    {% endblock %}
 <section>
   <div class="footdiv">

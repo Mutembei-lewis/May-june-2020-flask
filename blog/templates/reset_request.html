@@ -2,32 +2,29 @@
 {% block head %}
 {{super()}}
 <style>
-    @media screen and (min-width:1200px){
-        .content-section{
-            width: 60%;
-            height: 300px;
-            margin-top: 60px;
-            background-color: rgb(146, 219, 219);
-            padding: 30px;
-            
-        }
-       section{
-           width: 100%;
-           height: 80vh;
-           margin-top: 40px;
-           padding-top: 60px;
-       }
-    }
+  @media screen and (min-width:1200px){
+      .content-section{
+          background-color: aqua;
+          width: 50vw;
+          height: 300px;
+          position: relative;
+          top: 40%;
+          margin: 120px 80px 50px 180px;
+          padding: 30px;
+
+      }
+    
+  }
 </style>
 {% endblock  %}
 {% block content %}
 
 <section>
-    <div class="content-section mx-lg-auto">
+    <div class="content-section">
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Reset Password</legend>
+               <h2 class="text-center"> Reset password </h2>
                 <div class="form-group">
                     {{ form.email.label(class="form-control-label") }}
                     {% if form.email.errors %}

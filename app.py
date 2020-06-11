@@ -35,7 +35,8 @@ def post(post_id):
     post =Post.query.get_or_404(post_id)
     userposts = Post.query.filter_by(author = post.author).all()
     user = User.query.filter_by(username =post.author).first()
-    return render_template('post.html',title=post.title,post=post, user = user,userposts=userposts)
+    comments = Comment.query.all()
+    return render_template('post.html',title=post.title,post=post, user = user,userposts=userposts, comments =comments)
     
 #  2020shavine!
 
@@ -111,6 +112,7 @@ def signup():
     form = RegistrationForm()
     if  form.validate_on_submit():
         password = generate_password_hash(form.password.data)
+
         user = User(username=form.username.data,
                     email=form.email.data,
                     password_hash=password)
@@ -235,7 +237,8 @@ def add_comment(post_id):
             comm = Comment(name = request.form.get('name'),
                             email = request.form.get('email'),
                             message = request.form.get('message'),
-                            post_id = post_id )
+                            post_id = post_id,
+                            date_posted = datetime.datetime.now() )
             db.session.add(comm)
             db.session.commit()
             flash('Your comment has been added successfully','success')

@@ -1,4 +1,8 @@
-
+/*font-family: 'Bentham', serif;
+font-family: 'Lora', serif;
+font-family: 'Montaga', serif;
+font-family: 'PT Serif', serif;
+*/
 
 .nav-css{
   background-color: aqua;
@@ -10,6 +14,12 @@
   }
 /*end of general css footer code*/
 
+.feedback{
+  position: relative;
+  top:90px;
+  width: 100vw;
+  z-index: 999;
+}
 
 @media screen and (min-width:320px ) and (max-width: 360px){
   body{

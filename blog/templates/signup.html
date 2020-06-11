@@ -30,10 +30,9 @@ background-position: center center;
         <h3 class="text-center"> Sign Up</h3>
         <div class="formcontainer form-group"> <p>
             {{ form.username.label(class='labels') }} <br>
+            
             {{ form.username( class='form-element form-control-sm') }}
-            {% for error in form.username.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
+           
         </p>
 
         </div>

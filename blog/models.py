@@ -75,15 +75,13 @@ class User (UserMixin,db.Model):
 
 class Comment(db.Model):
     __tablename__ = 'comments'
-    def __init__(self,name,email,message,post_id):
-        self.name = name
-        self.email = email
-        self.message = message
-        self.post_id = post_id
+    
+       
 
     id = db.Column(db.Integer,primary_key = True)
     name = db.Column(db.String(64), unique= False)
     email = db.Column(db.String(64),unique=False)
     message =db.Column(db.String(250), index=False, nullable= False)
     post_id = db.Column(db.Integer,db.ForeignKey('post.id'),nullable=False)
+    date_posted = db.Column(db.DateTime())
     
