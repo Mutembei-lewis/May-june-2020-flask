@@ -35,7 +35,7 @@ def post(post_id):
     post =Post.query.get_or_404(post_id)
     userposts = Post.query.filter_by(author = post.author).all()
     user = User.query.filter_by(username =post.author).first()
-    comments = Comment.query.all()
+    comments = Comment.query.filter_by(post_id =post_id).all()
     return render_template('post.html',title=post.title,post=post, user = user,userposts=userposts, comments =comments)
     
 #  2020shavine!
