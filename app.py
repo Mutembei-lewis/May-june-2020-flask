@@ -10,7 +10,7 @@ from werkzeug.security import generate_password_hash
 import string
 from flask_admin.contrib.sqla import ModelView
 from flask_mail import Message
-import psycopg2
+
 
 
 ### FLASK-ADMIN  VIEW SHOULD BE ADDED DOWN HERE###
