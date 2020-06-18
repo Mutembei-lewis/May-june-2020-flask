@@ -11,9 +11,9 @@ login_manager = LoginManager()
 app =Flask(__name__)
 admin = Admin(app,template_mode='bootstrap4')
 
-app.config['SECRET_KEY'] = "mysecretkey"
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:////home/walker/Bloggy/blogy.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATION']= False
 app.config['POST_UPLOAD_FOLDER']  = os.path.join(basedir,'static/images/post/')
 app.config['IMAGE_UPLOAD_FOLDER'] = os.path.join(basedir,'static/images/profiles/')
