@@ -15,7 +15,7 @@ admin = Admin(app,template_mode='bootstrap4')
 
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 basedir = os.path.abspath(os.path.dirname(__file__))
-os.environ['DATABASE_URL'] = <URL>
+
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATION']= False
 app.config['POST_UPLOAD_FOLDER']  = os.path.join(basedir,'static/images/post/')
