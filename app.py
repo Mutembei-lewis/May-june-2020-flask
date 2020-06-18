@@ -10,6 +10,8 @@ from werkzeug.security import generate_password_hash
 import string
 from flask_admin.contrib.sqla import ModelView
 from flask_mail import Message
+import psycopg2
+os.environ['DATABASE_URL'] = <URL>
 
 ### FLASK-ADMIN  VIEW SHOULD BE ADDED DOWN HERE###
 # admin.add_view(ModelView(User,db.session))
