@@ -13,10 +13,12 @@ login_manager = LoginManager()
 app =Flask(__name__)
 admin = Admin(app,template_mode='bootstrap4')
 
-app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+app.config['SECRET_KEY'] = ' Mysecretkey'
 basedir = os.path.abspath(os.path.dirname(__file__))
+os.environ['DATABASE_URL'] = "postgresql://postgres://tyedljkdgladsv:2e3341bc7bbd7ec1bd97132ef08fc667e2356b40533cde003f1453a77ae13200@ec2-34-224-229-81.compute-1.amazonaws.com:5432/dbrrtjs6iqpn2p"
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+app.config["DATABASE_URL"] = "postgresql://postgres://tyedljkdgladsv:2e3341bc7bbd7ec1bd97132ef08fc667e2356b40533cde003f1453a77ae13200@ec2-34-224-229-81.compute-1.amazonaws.com:5432/dbrrtjs6iqpn2p"
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config['SQLALCHEMY_TRACK_MODIFICATION']= False
 app.config['POST_UPLOAD_FOLDER']  = os.path.join(basedir,'static/images/post/')
 app.config['IMAGE_UPLOAD_FOLDER'] = os.path.join(basedir,'static/images/profiles/')

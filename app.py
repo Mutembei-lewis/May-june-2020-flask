@@ -1,3 +1,6 @@
+
+import os
+
 from flask import render_template,url_for,request,flash,redirect,abort
 from blog import app,admin,mail
 from blog.Forms import PostForm,UpdatePasswordForm, UpdateBioForm,RegistrationForm,LoginForm,ResetPasswordForm,RequestResetForm
@@ -11,6 +14,7 @@ import string
 from flask_admin.contrib.sqla import ModelView
 from flask_mail import Message
 
+os.environ['DATABASE_URL'] = "postgresql://postgres://tyedljkdgladsv:2e3341bc7bbd7ec1bd97132ef08fc667e2356b40533cde003f1453a77ae13200@ec2-34-224-229-81.compute-1.amazonaws.com:5432/dbrrtjs6iqpn2p"
 
 
 ### FLASK-ADMIN  VIEW SHOULD BE ADDED DOWN HERE###
