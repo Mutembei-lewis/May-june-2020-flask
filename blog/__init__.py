@@ -1,5 +1,5 @@
 import os
-import psycopg2
+
 from flask_sqlalchemy import SQLAlchemy
 from  flask import Flask,render_template,session
 from flask_mail import Mail
